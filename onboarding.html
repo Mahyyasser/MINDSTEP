@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/nav&footer.css">
+    <link rel="stylesheet" href="css/onboarding.css">
+    <title>Document</title>
+</head>
+<body>
+
+<nav>
+
+    <div class="logo">
+        <img src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png" alt="Mind Step">
+    </div>
+
+    <ul class="nav-links">
+
+        <li><a href="index.html">HOME</a></li>
+
+        <li class="features-menu">
+            <a href="index.html#features">
+                Features
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <ul class="features-dropdown">
+                <li><a href="diagnostic-test.html">Knowledge Assessment</a></li>
+                <li><a href="result.html">Weakness Deduction</a></li>
+                <li><a href="study-plan.html">Personalized Study Plan</a></li>
+                <li><a href="flashcards.html">Smart Flash Cards</a></li>
+                <li><a href="material.html">MATERIALS</a></li>
+                <li><a href="challenges.html">CHALLENGES</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </li>
+
+        <li><a href="index.html#how-it-works">How It Works</a></li>
+        <li><a href="index.html#contact">CONTACT US</a></li>
+
+    </ul>
+
+    <div class="nav-actions">
+
+        <button onclick="toggleDarkMode()" class="dark-mode-btn" id="darkModeBtn" type="button">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <a href="login.html" class="nav-cta">LOGIN</a>
+        <a href="signup.html" class="nav-cta">SIGNUP</a>
+
+        <i onclick="showsidebar()" class="fa-solid fa-bars menu-icon"></i>
+
+    </div>
+
+    <div class="sidebar">
+
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png" alt="Mind Step">
+            </div>
+            <i onclick="hidesidebar()" class="fa-solid fa-xmark close-icon"></i>
+        </div>
+
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+
+            <li class="sidebar-features">
+                <a href="index.html#features">
+                    Features
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+
+                <ul class="sidebar-features-dropdown">
+                    <li><a href="diagnostic-test.html">Knowledge Assessment</a></li>
+                    <li><a href="result.html">Weakness Deduction</a></li>
+                    <li><a href="study-plan.html">Personalized Study Plan</a></li>
+                    <li><a href="flashcards.html">Smart Flash Cards</a></li>
+                    <li><a href="material.html">MATERIALS</a></li>
+                    <li><a href="challenges.html">CHALLENGES</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </li>
+
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="index.html#contact">CONTACT US</a></li>
+        </ul>
+
+        <div class="sidebar-buttons">
+            <a href="login.html" class="sider-cta">LOGIN</a>
+            <a href="signup.html" class="sider-cta">SIGNUP</a>
+        </div>
+
+    </div>
+
+</nav>
+
+    <!-- ////////page1///// -->
+    <div class="onboarding" >
+        <img src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png" alt="Mind step" class="logop5">
+        <div class="headerp1">
+        <h1>What do you want to learn?</h1>
+    <p>choose the topics you want to focus on.</p>
+        </div>
+
+    <div class="subject">
+    <div class="option">      
+    <input type="checkbox" class="check">
+    <span id="html">&lt;/&gt;</span>
+        
+        <h2>HTML</h2>
+        <P>Stucture the web HTML.</P>
+    </div>
+
+    <div class="option">
+        <input type="checkbox" class="check">
+        <span id="css">{}</span>
+        <h2>CSS</h2>
+        <p>Style your website with CSS.</p>
+    </div>
+
+    <div class="option">
+        <input type="checkbox" class="check">
+        <span id="js">JS</span>
+        <h2>Javascript</h2>
+        <p>Make your website interactive.</p>
+    </div>
+    </div>
+
+    <p>you can select one or more topic</p>
+    <div class="buttons"> 
+<a href="index.html"  id="backhome">
+    ← Back
+</a>
+        <!-- <button type="button" id="back">← Back</button> -->
+        <button type="button" id="continueBtn">Continue →</button>
+    </div>
+    </div>
+<!-- /////////page2////// -->
+    <div class="onboarding"  >
+        <img src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png" alt="Mind step" class="logop5">
+        <div class="headerp2">
+        <h1>Which one describes you best?</h1>
+    <p>this is help us personalize your learning path.</p>
+        </div>
+
+    <div class="levels">
+    <label class="level" id="beginner">
+    <input type="radio" name="level"  value=Beginner>
+    <div>
+    <h3>I'm curious</h3>
+    <p>I love discovering new things.</p>
+    </div>
+    </label>
+
+    <label class="level" id="intermediate">
+    <input type="radio" name="level" value=Intermediate>
+    <div><h3>I'm a problem solver</h3>
+    <p>I enjoy finding solutions.</p>
+    </div>
+    </label>
+
+    <label class="level" id="advances">
+    <input type="radio" name="level" value=Advances>
+    <div><h3>I'm creative</h3>
+    <p>I love creating new ideas.</p>
+    </div>
+    </label>
+        </div>
+
+        <div class="buttons">
+        <button type="button" id="back">← Back</button>
+    </div>
+    </div>
+    <!-- ////////////page3////// -->
+        <div class="onboarding"  >
+        <img src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png" alt="Mind step" class="logop5">
+        <div class="headerp3">
+        <h1>What's your main goal?</h1>
+    <p>this is help us personalize your learning path.</p>
+        </div>
+
+        <div class="goals">
+        <label class="goal">
+        <input type="radio" name="goal" value="Learn front-end from scratch">
+        <div><h3>Learn front-end from scratch</h3>
+        <p>start your journey step by step.</p>
+    </div>
+    </label>
+
+    <label class="goal">
+        <input type="radio" name="goal" value="Improve my existing skills">
+        <div><h3>Improve my existing skills</h3>
+        <p>Take your skills to the next level.</p>
+    </div>
+    </label>
+
+    <label class="goal">
+        <input type="radio" name="goal" value="Prepare for a project">
+        <div><h3>Prepare for a project</h3>
+        <p>Build real-world projects.</p>
+    </div>
+    </label>
+
+    <label class="goal">
+        <input type="radio" name="goal" value="Prepare for interview">
+        <div><h3>Prepare for interview</h3>
+        <p>Get ready for front-end interviews.</p>
+    </div>
+    </label>
+        </div>
+
+        <div class="buttons">
+        <button type="button" id="back">← Back</button>
+        </div>
+        </div>
+       <!-- ///////////page4//////// -->
+        <div class="onboarding"  >
+        <img src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png" alt="Mind step" class="logop5">
+        <div class="headerp4">
+    <h1>How do you usually approach something new?</h1>
+    <p>We'll use this to build your study plan.</p>
+        </div>
+
+        <div class="times">
+    <label class="time">
+    <input type="radio" name="time"  value="15 minutes a day">
+        <div ><h3>I explore first</h3></div>
+    </label>
+
+    <label class="time">
+    <input type="radio" name="time"  value="30 minutes a day">
+        <div><h3>I think it through</h3></div>
+    </label>
+
+    <label class="time">
+    <input type="radio" name="time"  value="1 hour a day">
+    <div><h3>I ask for help</h3></div>
+    </label>
+
+    <label class="time">
+    <input type="radio" name="time"  value="2+ hours a day">
+    <div><h3>I jump right in</h3></div>
+    </label>
+        </div>
+
+        <div class="buttons">
+        <button type="button" id="back">← Back</button>
+    </div>
+    </div>
+<!-- //////////page5/////// -->
+    <div class="onboarding" >
+        <img src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png" alt="Mind step" class="logop5">
+        <div class="buttons"> 
+        <button type="button" id="backBtn">← Back</button>
+        </div>
+
+        <div class="end">
+        <div>
+        <div class="photo"><img src="EBIZ-Illustrations-05.png" alt="All right"></div>
+        <div class="headerp5">
+        <h1>You,re all set!🎉</h1>
+        <p>We'll use your answers to personalize your learning journey</p>
+        </div>
+
+        <div class="buttonp5">
+        <div><button type="submit" class="start-test-p5" id="finish">Start Diagnostic test →</button></div>
+        <br>
+        <div><button type="submit" id="later">I'll do it later</button></div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-logo">
+            <img
+                src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png"
+                alt="Mind Step"
+            >
+        </div>
+
+        <p class="footer-tagline">
+            Learn smarter. Remember better.
+        </p>
+
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">customer service</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        <p>&copy; 2026 Mind Step. All rights reserved.</p>
+    </div>
+
+</footer>
+
+    <script src="js/onboarding.js"></script>
+    <script src="js/mahy.js"></script>
+</body>
+</html>

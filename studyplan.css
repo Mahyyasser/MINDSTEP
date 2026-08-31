@@ -1,0 +1,768 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #f7f8fc;
+    color: #11194d;
+}
+
+
+/* =========================================================
+   DARK MODE — Study Plan page
+========================================================= */
+
+body.dark-mode {
+    background: #15162b;
+    color: #ffffff;
+}
+
+body.dark-mode .header {
+    background: #15162b;
+}
+
+body.dark-mode .first-section,
+body.dark-mode .section-card,
+body.dark-mode .academic-coaching,
+body.dark-mode .coaching-card,
+body.dark-mode .goal-card,
+body.dark-mode .popup-box,
+body.dark-mode .plan-card {
+    background: #20213d;
+    border-color: #303152;
+}
+
+body.dark-mode .first-text p,
+body.dark-mode .heading-section p,
+body.dark-mode .section-heading h2,
+body.dark-mode .booking-text p,
+body.dark-mode .goal-card p,
+body.dark-mode .technique p,
+body.dark-mode .academic-title p,
+body.dark-mode .saved-title,
+body.dark-mode .popup-box p {
+    color: #b8bad0;
+}
+
+body.dark-mode .heading-section h2,
+body.dark-mode .booking-text h3,
+body.dark-mode .academic-title h2,
+body.dark-mode .popup-box h2,
+body.dark-mode .plan-number,
+body.dark-mode .goal-card h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .form-group label {
+    color: #ffffff;
+}
+
+body.dark-mode .form-group input {
+    background: #18192f;
+    border-color: #363754;
+    color: #ffffff;
+}
+
+body.dark-mode .plan-card table,
+body.dark-mode .plan-card td {
+    background: #18192f;
+    color: #b8bad0;
+    border-color: #303152;
+}
+
+body.dark-mode .plan-card th {
+    background: #262752;
+    color: #a99fff;
+    border-color: #303152;
+}
+
+body.dark-mode .goal {
+    border-top-color: #303152;
+    color: #b8bad0;
+}
+
+body.dark-mode .technique {
+    border-right-color: #303152;
+}
+
+@media (max-width: 1000px) {
+    body.dark-mode .technique {
+        border-bottom-color: #303152;
+    }
+}
+
+body.dark-mode .save-btn,
+body.dark-mode .book-btn:hover,
+body.dark-mode .popup-box button {
+    background-color: #633cff;
+}
+
+
+
+
+
+
+.header {
+    height: 85px;
+    width: 100%;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: #fff;
+    border-bottom: 1px solid #eeeeff;
+    border-radius: 0 0 40px 40px;
+}
+.exit-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1.5px solid #d8d4ff;
+    background: #fff;
+    color: #6366f1;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+.exit-btn:hover {
+    background: #f3efff;
+}
+.study-plan-container {
+    width: 92%;
+    max-width: 1250px;
+    margin: 35px auto 60px;
+}
+.first-section {
+    padding: 35px 45px;
+    margin-bottom: 25px;
+    background: #fff;
+    border-radius: 22px;
+    border: 1px solid #e8e8f5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.first-text h1 {
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.15;
+    margin-bottom: 15px;
+}
+.first-text h1 span {
+    display: block;
+    background:
+        linear-gradient(
+            90deg,
+            #7c3aed,
+            #2563eb,
+            #06b6d4
+        );
+    background-clip: text;
+    color: transparent;
+}
+.first-text p {
+    color: #68708f;
+    font-size: 16px;
+    line-height: 1.7;
+}
+.img {
+    width: 220px;
+    height: 220px;
+}
+.section-card {
+    background: #fff;
+    border: 1px solid #e8e8f5;
+    border-radius: 22px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 30px rgba(30, 41, 90, 0.05);
+}
+.heading-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+.heading-section .icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    background: #f0edff;
+}
+.heading-section h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+.heading-section p {
+    color: #7b829e;
+    font-size: 14px;
+}
+.section-heading {
+    margin-bottom: 22px;
+}
+.section-heading h2 {
+    font-size: 22px;
+    margin: 0;
+}
+.schedule-form {
+    max-width: 520px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.form-group:nth-child(2) {
+    margin-bottom: -12px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.form-group label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #4e5678;
+}
+.form-group input {
+    height: 46px;
+    width: 100%;
+    padding: 0 13px;
+    border: 1px solid #dddff0;
+    border-radius: 10px;
+    background: #fafaff;
+    color: #11194d;
+    font-size: 14px;
+    outline: none;
+}
+.form-group input:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.08);
+}
+.save-area {
+    text-align: center;
+    margin-top: 22px;
+}
+.save-btn {
+    padding: 12px 40px;
+    border: 0;
+    border-radius: 11px;
+    background-color: #7c3aed;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.error-message {
+    color: #dc2626;
+    font-size: 12px;
+    min-height: 0;
+}
+.error-message:not(:empty) {
+    min-height: 14px;
+}
+.saved-section {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid #eeeeF6;
+}
+.saved-title {
+    margin-bottom: 18px;
+    text-align: center;
+    font-size: 19px;
+    font-weight: bold;
+    color: #11194d;
+}
+.saved-display {
+    display: grid;
+    gap: 15px;
+}
+.hidden {
+    display: none !important;
+}
+.plan-card {
+    position: relative;
+    padding: 20px;
+    border: 1px solid #e5e6f2;
+    border-radius: 15px;
+    background: #fafaff;
+    overflow-x: auto;
+}
+.plan-number {
+    padding-right: 35px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #11194d;
+    margin-bottom: 15px;
+}
+.delete-plan {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 27px;
+    height: 27px;
+    border: 0;
+    border-radius: 50%;
+    background: #eeeef6;
+    color: #777d97;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.delete-plan:hover {
+    background: #fee2e2;
+    color: #dc2626;
+}
+.plan-card table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+.plan-card th,
+.plan-card td {
+    padding: 12px;
+    border: 1px solid #eeeeF6;
+    text-align: left;
+    font-size: 13px;
+}
+.plan-card th {
+    background: #f3efff;
+    color: #6366f1;
+    font-weight: bold;
+}
+.plan-card td {
+    color: #5f6784;
+    background: #fff;
+}
+.academic-coaching {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-top: 20px;
+    border: 1px solid #edf0f8;
+    box-shadow: 0 4px 15px rgba(32, 45, 90, 0.06);
+    margin-bottom: 22px;
+}
+.academic-header {
+    margin-bottom: 20px;
+}
+.academic-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.academic-icon {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+.academic-title h2 {
+    margin: 0;
+    color: #11194d;
+    font-size: 22px;
+    font-weight: 700;
+}
+.academic-title p {
+    margin: 5px 0 0;
+    color: #59627f;
+    font-size: 14px;
+}
+.coaching-card {
+    width: 100%;
+    min-height: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 28px;
+    background: #ffffff;
+    border: 1px solid #e4ddff;
+    border-radius: 14px;
+}
+.coaching-info {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+.booking-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0ebff;
+    border-radius: 12px;
+    font-size: 28px;
+}
+.booking-text h3 {
+    margin: 0 0 6px;
+    color: #11194d;
+    font-size: 17px;
+    font-weight: 700;
+}
+.booking-text p {
+    margin: 0;
+    color: #59627f;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.book-btn {
+    min-width: 180px;
+    height: 52px;
+    padding: 0 28px;
+    background: #ffffff;
+    color: #633cff;
+    border: 2px solid #633cff;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.book-btn:hover {
+    background: #633cff;
+    color: #ffffff;
+}
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 25, 77, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    z-index: 9999;
+}
+.popup-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+.popup-box {
+    width: 380px;
+    max-width: 90%;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 35px 30px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(17, 25, 77, 0.2);
+}
+
+.popup-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8f7ef;
+    color: #28a66f;
+    border-radius: 50%;
+    font-size: 34px;
+    font-weight: bold;
+}
+.popup-box h2 {
+    margin: 0 0 10px;
+    color: #11194d;
+    font-size: 24px;
+    font-weight: 700;
+}
+.popup-box p {
+    margin: 0 0 25px;
+    color: #59627f;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.popup-box button {
+    width: 120px;
+    height: 42px;
+    border: none;
+    border-radius: 10px;
+    background: #633cff;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.popup-box button:hover {
+    background: #5130d9;
+}
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+.goal-card {
+    padding: 22px;
+    border-radius: 17px;
+    border: 1px solid #e7e8f4;
+    background: #fff;
+}
+.goal-card h3 {
+    font-size: 18px;
+    margin-bottom: 9px;
+}
+.html-card h3 {
+    color: #7c3aed;
+}
+.css-card h3 {
+    color: #2563eb;
+}
+.js-card h3 {
+    color: #06b6d4;
+}
+.goal-card p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #6f7692;
+    min-height: 65px;
+}
+.goal {
+    padding-top: 14px;
+    margin-top: 12px;
+    border-top: 1px solid #eeeeF6;
+    font-size: 12px;
+    color: #5c6482;
+    line-height: 1.5;
+}
+.techniques-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.technique {
+    padding: 5px 25px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border-right: 1px solid #eeeeF6;
+}
+.technique:last-child {
+    border-right: none;
+}
+.technique-icon {
+    min-width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+}
+.purple-tech {
+    background: #eee8ff;
+    color: #7c3aed;
+}
+.blue-tech {
+    background: #e8efff;
+    color: #2563eb;
+}
+.cyan-tech {
+    background: #e2f9fc;
+    color: #06b6d4;
+}
+.technique h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.technique p {
+    font-size: 13px;
+    color: #707895;
+    line-height: 1.6;
+}
+
+@media (max-width: 1000px) {
+    .goals-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .techniques-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .technique {
+        padding: 10px 0 18px;
+        border-right: none;
+        border-bottom: 1px solid #eeeeF6;
+    }
+    .technique:last-child {
+        border-bottom: none;
+    }
+}
+@media (max-width: 700px) {
+    .header {
+        height: 70px;
+        padding: 0 5%;
+        border-radius: 0 0 25px 25px;
+    }
+    .study-plan-container {
+        width: 94%;
+        margin-top: 20px;
+    }
+    .first-section {
+        padding: 25px 22px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .first-text h1 {
+        font-size: 31px;
+    }
+    .first-text p {
+        font-size: 14px;
+    }
+    .first-illustration {
+        align-self: center;
+        margin-top: 10px;
+    }
+    .img {
+        width: 180px;
+        height: 180px;
+    }
+    .section-card {
+        padding: 20px 16px;
+    }
+    .schedule-form {
+        width: 100%;
+    }
+    .goals-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .saved-title {
+        font-size: 18px;
+    }
+    .plan-card {
+        padding: 15px;
+    }
+    .plan-card table {
+        min-width: 420px;
+    }
+    .technique {
+        gap: 12px;
+    }
+}
+@media (max-width: 450px) {
+    .exit-btn {
+        padding: 9px 15px;
+        font-size: 14px;
+    }
+    .first-section {
+        padding: 22px 18px;
+    }
+    .first-text h1 {
+        font-size: 27px;
+    }
+    .first-text p {
+        font-size: 13px;
+    }
+    .img {
+        width: 155px;
+        height: 155px;
+    }
+    .heading-section {
+        gap: 11px;
+    }
+    .heading-section .icon {
+        width: 44px;
+        height: 44px;
+        font-size: 22px;
+    }
+    .heading-section h2 {
+        font-size: 19px;
+    }
+    .heading-section p {
+        font-size: 12px;
+    }
+    .section-heading h2 {
+        font-size: 19px;
+    }
+    .save-btn {
+        width: 100%;
+        max-width: 220px;
+    }
+    .plan-card table {
+        min-width: 380px;
+    }
+    .technique-icon {
+        min-width: 55px;
+        height: 55px;
+        font-size: 23px;
+    }
+}
+@media (max-width: 768px) {
+    .academic-coaching {
+        padding: 20px;
+    }
+    .coaching-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .book-btn {
+        width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    .academic-title {
+        align-items: flex-start;
+    }
+    .academic-title h2 {
+        font-size: 19px;
+    }
+    .academic-title p {
+        font-size: 13px;
+    }
+    .coaching-info {
+        gap: 14px;
+    }
+    .booking-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 23px;
+    }
+    .booking-text h3 {
+        font-size: 15px;
+    }
+    .booking-text p {
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Cards | Mind Step</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/nav&footer.css">
+    <link rel="stylesheet" href="css/flashcards.css">
+</head>
+<body>
+
+<nav>
+
+    <div class="logo">
+        <img src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png" alt="Mind Step">
+    </div>
+
+    <ul class="nav-links">
+
+        <li><a href="index.html">HOME</a></li>
+
+        <li class="features-menu">
+            <a href="index.html#features">
+                Features
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <ul class="features-dropdown">
+                <li><a href="diagnostic-test.html">Knowledge Assessment</a></li>
+                <li><a href="result.html">Weakness Deduction</a></li>
+                <li><a href="study-plan.html">Personalized Study Plan</a></li>
+                <li><a href="flashcards.html" class="active">Smart Flash Cards</a></li>
+                <li><a href="material.html">MATERIALS</a></li>
+                <li><a href="challenges.html">CHALLENGES</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </li>
+
+        <li><a href="index.html#how-it-works">How It Works</a></li>
+        <li><a href="index.html#contact">CONTACT US</a></li>
+
+    </ul>
+
+    <div class="nav-actions">
+
+        <button onclick="toggleDarkMode()" class="dark-mode-btn" id="darkModeBtn" type="button">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <a href="login.html" class="nav-cta">LOGIN</a>
+        <a href="signup.html" class="nav-cta">SIGNUP</a>
+
+        <i onclick="showsidebar()" class="fa-solid fa-bars menu-icon"></i>
+
+    </div>
+
+    <div class="sidebar">
+
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png" alt="Mind Step">
+            </div>
+            <i onclick="hidesidebar()" class="fa-solid fa-xmark close-icon"></i>
+        </div>
+
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+
+            <li class="sidebar-features">
+                <a href="index.html#features">
+                    Features
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+
+                <ul class="sidebar-features-dropdown">
+                    <li><a href="diagnostic-test.html">Knowledge Assessment</a></li>
+                    <li><a href="result.html">Weakness Deduction</a></li>
+                    <li><a href="study-plan.html">Personalized Study Plan</a></li>
+                    <li><a href="flashcards.html">Smart Flash Cards</a></li>
+                    <li><a href="material.html">MATERIALS</a></li>
+                    <li><a href="challenges.html">CHALLENGES</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </li>
+
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="index.html#contact">CONTACT US</a></li>
+        </ul>
+
+        <div class="sidebar-buttons">
+            <a href="login.html" class="sider-cta">LOGIN</a>
+            <a href="signup.html" class="sider-cta">SIGNUP</a>
+        </div>
+
+    </div>
+
+</nav>
+
+<div class="app-shell">
+                                                                                         <!--
+                                                                                                  APP RAIL 
+                                                                                                            -->
+<aside class="app-rail" id="appRail" aria-label="App navigation">
+
+<div class="sidebar-links" role="tablist" aria-label="Sections">
+ <button class="sidebar-link" type="button" data-view="home" role="tab" aria-selected="false">
+<span class="sidebar-link-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path fill="currentColor"
+             d="M12 3.2 2 11h3v9h5v-6h4v6h5v-9h3L12 3.2z"/>
+        </svg>
+    </span>
+    <span class="sidebar-link-text">Home</span>
+</button>
+<button class="sidebar-link active" type="button" data-view="flashcards" role="tab" aria-selected="true">
+    <span class="sidebar-link-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path fill="currentColor"
+    d="M4 4h13a2 2 0 012 2v1H4V4zm0 5h19v9a2 2 0 01-2 2H6a2 2 0 01-2-2V9zm3 3v2h6v-2H7z"/>
+</svg>
+     </span>
+        <span class="sidebar-link-text">Flash Cards</span>
+</button>
+<button class="sidebar-link" type="button" data-view="notes" role="tab" aria-selected="false">
+    <span class="sidebar-link-icon" aria-hidden="true">
+         <svg viewBox="0 0 24 24"><path fill="currentColor"
+     d="M5 3h11l3 3v15a1 1 0 01-1 1H5a1 1 0 01-1-1V4a1 1 0 011-1zm2 6h9v2H7V9zm0 4h9v2H7v-2zm0 4h6v2H7v-2z"/></svg>
+    </span>
+     <span class="sidebar-link-text">Notes</span>
+    </button>
+<button class="sidebar-link" type="button" data-view="favorites" role="tab" aria-selected="false">
+    <span class="sidebar-link-icon" aria-hidden="true">
+         <svg viewBox="0 0 24 24"><path fill="currentColor" 
+            d="M12 2.5l3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.9l-6.18 3.6L7 14.63l-5-4.87 6.91-1L12 2.5z"/>
+        </svg>
+    </span>
+     <span class="sidebar-link-text">Favorites</span>
+</button>
+ </div>
+  <div class="sidebar-footer">
+<span class="sidebar-footer-text">Keep learning, one card at a time.</span>
+ </div>
+</aside>
+
+ <div class="app-content">
+
+<main>
+
+            <!-- 
+                                                                      HOME — persistent section
+           -->
+ <div class="home-hero">
+ <span class="fc-eyebrow-main home-eyebrow">Welcome back</span>
+<h1 class="home-heading">Your learning material</h1>
+<p class="home-subheading">Pick up where you left off, or jump straight into a flash card deck from the sidebar.</p>
+</div>
+
+
+ <div class="material-accordion" id="materialAccordion">
+<div class="material-item open" data-material="html">
+<button class="material-header" type="button" aria-expanded="true">
+ <span class="material-icon material-icon-html" aria-hidden="true">🌐</span>
+ <span class="material-header-text">
+<span class="material-title">HTML Fundamentals</span>
+<span class="material-desc">Structure, elements, semantics &amp; attributes.</span>
+ </span>
+<span class="material-chevron" aria-hidden="true">▾</span>
+</button>
+<div class="material-body">
+<div class="material-body-inner">
+<p>HTML is the skeleton of every web page — it defines structure and meaning before any styling is applied.
+     Start with elements, then move on to semantic tags and accessibility basics.</p>
+
+
+ <button class="fc-btn fc-btn-know material-cta" type="button" data-open-deck="html">Practice HTML Cards</button>
+ </div>
+</div>
+</div>
+
+<div class="material-item" data-material="css">
+<button class="material-header" type="button" aria-expanded="false">
+ <span class="material-icon material-icon-css" aria-hidden="true">🎨</span>
+<span class="material-header-text">
+<span class="material-title">CSS Styling</span>
+<span class="material-desc">Box model, flexbox, specificity &amp; responsive design.</span>
+ </span>
+ <span class="material-chevron" aria-hidden="true">▾</span>
+</button>
+<div class="material-body">
+ <div class="material-body-inner">
+<p>CSS controls how a page looks and adapts across devices. Once you're comfortable with HTML,
+these cards cover the box model, layout systems, and how the cascade actually works.</p>
+
+<button class="fc-btn fc-btn-know material-cta" type="button" data-open-deck="css">Practice CSS Cards</button>
+ </div>
+ </div>
+</div>
+
+                    <div class="material-item" data-material="javascript">
+                        <button class="material-header" type="button" aria-expanded="false">
+                            <span class="material-icon material-icon-js" aria-hidden="true">⚡</span>
+                            <span class="material-header-text">
+                                <span class="material-title">JavaScript Basics</span>
+                                <span class="material-desc">Variables, functions, events &amp; the DOM.</span>
+                            </span>
+                            <span class="material-chevron" aria-hidden="true">▾</span>
+                        </button>
+                        <div class="material-body">
+                            <div class="material-body-inner">
+                                <p>JavaScript brings a page to life. These cards walk through variables, functions, arrays, and the events that make a page interactive — everything you've seen powering this deck.</p>
+                                <button class="fc-btn fc-btn-know material-cta" type="button" data-open-deck="javascript">Practice JavaScript Cards</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+                                              <!--  FLASH CARDS — switchable section-->
+                        
+<section class="app-panel switchable-panel" id="flashcardsSection" data-view-panel="flashcards">
+                                                       <!-- فلاش كارد -->
+ <section class="fc-section" id="flashcards">
+<div class="fc-container" id="fcContainer" data-category="html">
+<div class="fc-intro">
+<span class="fc-eyebrow fc-eyebrow-main">Interactive Learning</span>
+<h2 class="fc-heading">Flash Cards</h2>
+<p class="fc-subheading">Flip through HTML, CSS &amp; JavaScript concepts one card at a time.
+     Finish a deck to unlock the next.</p>
+</div>
+<div class="fc-tabs" id="fcTabs" role="tablist" aria-label="Flash card categories">
+</div>
+
+   <div class="fc-deck-header">
+ <div class="fc-deck-title-row">
+<h3 id="fcDeckTitle">HTML Flash Cards</h3>
+<span class="fc-deck-count" id="fcDeckCount">0 / 10 completed</span>
+</div>
+ <div class="fc-progress-track">
+ <div class="fc-progress-fill" id="fcProgressFill" style="width:0%"></div>
+ </div>
+</div>
+
+ <div class="fc-locked-panel" id="fcLockedPanel" hidden>
+<div class="fc-lock-icon">
+    <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true">
+    <path fill="currentColor" d="M12 1a5 5 0 00-5 5v3H6a2 2 0 00-2 2v9a2
+    2 0 002 2h12a2 2 0 002-2v-9a2 2 0 00-2-2h-1V6a5 5 0 00-5-5zm-3 8V6a3
+    3 0 116 0v3H9zm3 4a2 2 0 011.94 2.5A2 2 0 0113 17.9V19h-2v-1.1a2 2 0
+     01-.94-3.4A2 2 0 0112 13z"/>
+     </svg>
+
+    </div>
+     <p id="fcLockedMessage">Complete all 10 HTML cards to unlock CSS.</p>
+    </div>
+
+     <div class="fc-deck" id="fcDeck">
+<div class="fc-scene">
+ <div class="fc-card" id="fcCard" role="button" tabindex="0"
+    aria-label="Flash card, tap to flip">
+
+                                                        <!-- front: question side -->
+
+    <div class="fc-face fc-face-front">
+    <button class="fc-star-btn" id="fcStarBtn" type="button" aria-pressed="false" aria-label="Save card to favorites">
+    <svg viewBox="0 0 24 24" class="fc-star-icon" aria-hidden="true">
+    <path fill="currentColor" d="M12 2.5l3.09 6.26 6.91 1-5 4.87 1.18 6.87L12 17.9l-
+     6.18 3.6L7 14.63l-5-4.87 6.91-1L12 2.5z"/>
+</svg>
+</button>
+
+ <div class="fc-face-top">
+ <span class="fc-badge fc-badge-category" id="fcCategoryBadge">HTML</span>
+<span class="fc-badge fc-badge-difficulty" id="fcDifficultyBadge">Beginner</span>
+</div>
+<div class="fc-question-wrap">
+<span class="fc-eyebrow">Question <span id="fcQNum">1</span> / <span id="fcQTotal">10</span></span>
+<p class="fc-question" id="fcQuestion">What is an HTML Element?</p>
+</div>
+
+    <div class="fc-dots" id="fcDots" aria-hidden="true"></div>
+    <div class="fc-flip-hint">
+<svg viewBox="0 0 24 24" class="fc-flip-icon" aria-hidden="true">
+ <path fill="currentColor" d="M12 5V2L7 6l5 4V7c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7
+2.8l1.46 1.46A7.94 7.94 0 0020 13c0-4.42-3.58-8-8-8zM6.7 10.2 5.24 8.74A7.94 7.94 0
+004 13c0 4.42 3.58 8 8 8v3l5-4-5-4v3c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8z"/>
+</svg>
+
+<span>Tap to flip</span>
+</div>
+</div>
+                                                               <!--  answer side -->
+ <div class="fc-face fc-face-back">
+<div class="fc-face-top">
+<span class="fc-badge fc-badge-answer">Answer</span>
+</div>
+ <div class="fc-back-scroll">
+    <p class="fc-answer" id="fcAnswer"></p>
+    <p class="fc-explanation" id="fcExplanation"></p>
+ <div class="fc-code-block" id="fcCodeBlock" hidden>
+ <div class="fc-code-label">Code Example</div>
+ <pre><code id="fcCode"></code></pre>
+</div>
+
+<div class="fc-key-point">
+ <div class="fc-key-point-label">💡 Key Point</div>
+ <p id="fcKeyPoint"></p>
+</div>
+<div class="fc-usage">
+<div class="fc-usage-label">📍 Used In</div>
+ <p id="fcUsage"></p>
+ </div>
+</div>
+ <div class="fc-flip-hint fc-flip-hint-back">
+ <span>Tap to flip back</span>
+</div>
+</div>
+ </div>
+ </div>
+
+                                                                           <!-- know / review  -->
+<div class="fc-know-buttons">
+<button class="fc-btn fc-btn-review" id="fcReviewBtn" type="button">
+<span class="fc-btn-icon">↻</span> Review Again
+</button>
+ <button class="fc-btn fc-btn-know" id="fcKnowBtn" type="button">
+<span class="fc-btn-icon">✓</span> I Know This
+</button>
+</div>
+
+                                                                             <!-- Prev / Next navigation -->
+ <div class="fc-nav">
+ <button class="fc-nav-btn fc-nav-btn-prev" id="fcPrevBtn" type="button" aria-label="Previous card">
+ <span class="fc-nav-btn-icon" aria-hidden="true">‹</span>
+ <span>Previous</span>
+ </button>
+<button class="fc-nav-btn fc-nav-btn-next" id="fcNextBtn" type="button" aria-label="Next card">
+ <span>Next</span>
+<span class="fc-nav-btn-icon" aria-hidden="true">›</span>
+</button>
+ </div>
+</div>
+
+<div class="fc-complete-panel" id="fcCompletePanel" hidden>
+<div class="fc-complete-emoji">🎉</div>
+ <h3 id="fcCompleteTitle">Great job!</h3>
+ <p id="fcCompleteText">You completed 10 / 10 cards.</p>
+ <div class="fc-complete-buttons">
+ <button class="fc-btn fc-btn-outline" id="fcReplayBtn" type="button">Review Again</button>
+ <button class="fc-btn fc-btn-know" id="fcContinueBtn" type="button">Continue</button>
+</div>
+ </div>
+
+ <div class="fc-course-complete" id="fcCourseComplete" hidden>
+ <div class="fc-complete-emoji">🏆</div>
+<h3>You finished the whole course!</h3>
+ <p>All 30 flash cards completed across HTML, CSS &amp; JavaScript. Nice work.</p>
+<button class="fc-btn fc-btn-know" id="fcBackToMaterialBtn" type="button">Back to Material</button>
+</div>
+</div>
+ </section>
+            </section>
+
+                                                                            <!-- nots— switchable section -->
+ <section class="app-panel switchable-panel" id="notesSection" data-view-panel="notes" hidden>
+ <div class="notes-wrap">
+<div class="fc-intro notes-intro">
+    <span class="fc-eyebrow fc-eyebrow-main">Your Notebook</span>
+     <h2 class="fc-heading">Notes</h2>
+    <p class="fc-subheading">Jot down anything while you study — it's saved right in your browser.
+
+    </p>
+</div>
+
+<div class="notebook">
+<div class="notebook-toolbar">
+ <span class="notebook-toolbar-label">📓 Study Notes</span>
+<span class="notebook-save-feedback" id="notesFeedback" role="status" aria-live="polite"></span>
+ </div>
+ <textarea class="notebook-textarea" id="notesTextarea" 
+ placeholder="Write anything you want to remember — definitions, examples, questions for later...">
+ </textarea>
+<div class="notebook-footer">
+ <span class="notebook-char-count" id="notesCharCount">0 characters</span>
+ <button class="fc-btn fc-btn-know notebook-save-btn" id="notesSaveBtn" type="button">
+ <span class="fc-btn-icon">💾</span> Save
+</button>
+</div>
+ </div>
+</div>
+ </section>
+
+                                                                                <!-- FAVORITES -->
+ <section class="app-panel switchable-panel" id="favoritesSection" data-view-panel="favorites" hidden>
+ <div class="fc-intro">
+<span class="fc-eyebrow fc-eyebrow-main">Saved For Later</span>
+ <h2 class="fc-heading">Favorites</h2>
+<p class="fc-subheading">Every card you've starred, in one place.</p>
+</div>
+
+<div class="favorites-empty" id="favoritesEmpty" hidden>
+ <div class="favorites-empty-icon" aria-hidden="true">⭐</div>
+ <p class="favorites-empty-title">
+    Your favorite cards will appear here.
+</p>
+                    <p class="favorites-empty-text">
+                        Save the concepts you want to review later!
+                    </p>
+
+ <button class="fc-btn fc-btn-know" type="button" data-open-deck="html"
+ >Browse Flash Cards
+</button>
+</div>
+
+<div class="favorites-list" id="favoritesList"></div>
+</section>
+
+</main>
+ </div>
+</div>
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-logo">
+            <img
+                src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png"
+                alt="Mind Step"
+            >
+        </div>
+
+        <p class="footer-tagline">
+            Learn smarter. Remember better.
+        </p>
+
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">customer service</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        <p>&copy; 2026 Mind Step. All rights reserved.</p>
+    </div>
+
+</footer>
+
+<script src="js/flashcards.js"></script>
+<script src="js/mahy.js"></script>
+</body>
+</html>

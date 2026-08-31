@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaidStip</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/nav&footer.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<nav>
+
+    <div class="logo">
+        <img src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png" alt="Mind Step">
+    </div>
+
+    <ul class="nav-links">
+
+        <li><a href="index.html">HOME</a></li>
+
+        <li class="features-menu">
+            <a href="index.html#features">
+                Features
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <ul class="features-dropdown">
+                <li><a href="diagnostic-test.html">Knowledge Assessment</a></li>
+                <li><a href="result.html">Weakness Deduction</a></li>
+                <li><a href="study-plan.html">Personalized Study Plan</a></li>
+                <li><a href="flashcards.html">Smart Flash Cards</a></li>
+                <li><a href="material.html">MATERIALS</a></li>
+                <li><a href="challenges.html">CHALLENGES</a></li>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            </ul>
+        </li>
+
+        <li><a href="index.html#how-it-works">How It Works</a></li>
+        <li><a href="index.html#contact">CONTACT US</a></li>
+
+    </ul>
+
+    <div class="nav-actions">
+
+        <button onclick="toggleDarkMode()" class="dark-mode-btn" id="darkModeBtn" type="button">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <a href="login.html" class="nav-cta">LOGIN</a>
+        <a href="signup.html" class="nav-cta">SIGNUP</a>
+
+        <i onclick="showsidebar()" class="fa-solid fa-bars menu-icon"></i>
+
+    </div>
+
+    <div class="sidebar">
+
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png" alt="Mind Step">
+            </div>
+            <i onclick="hidesidebar()" class="fa-solid fa-xmark close-icon"></i>
+        </div>
+
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+
+            <li class="sidebar-features">
+                <a href="index.html#features">
+                    Features
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+
+                <ul class="sidebar-features-dropdown">
+                    <li><a href="diagnostic-test.html">Knowledge Assessment</a></li>
+                    <li><a href="result.html">Weakness Deduction</a></li>
+                    <li><a href="study-plan.html">Personalized Study Plan</a></li>
+                    <li><a href="flashcards.html">Smart Flash Cards</a></li>
+                    <li><a href="material.html">MATERIALS</a></li>
+                    <li><a href="challenges.html">CHALLENGES</a></li>
+                    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                </ul>
+            </li>
+
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="index.html#contact">CONTACT US</a></li>
+        </ul>
+
+        <div class="sidebar-buttons">
+            <a href="login.html" class="sider-cta">LOGIN</a>
+            <a href="signup.html" class="sider-cta">SIGNUP</a>
+        </div>
+
+    </div>
+
+</nav>
+
+       <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu" 
+       aria-expanded="false" aria-controls="sidebar">
+       <i class="fa-solid fa-bars"></i>
+   </button>
+
+   <div class="page">
+    <aside class="side" id="sidebar">
+
+        <nav class="asidenav" aria-label="Primary">
+            <a href="#" class="nav-item active" title="Home" aria-current="page">
+                <i class="fa-solid fa-house"></i>
+            </a>
+        </nav>
+
+        <div class="streak-card" id="streakCard">
+            <div class="streak-flame">
+                <i class="fa-solid fa-fire"></i>
+            </div>
+            <div class="streak-number" id="streakNumber">0</div>
+            <div class="streak-label">Day Streak</div>
+            <div class="streak-week" id="streakWeek" aria-hidden="true"></div>
+        </div>
+
+        <div class="notes-card">
+            <h3><i class="fa-solid fa-list-check"></i> Study Checklist</h3>
+
+            <form class="notes-form" id="notesForm">
+                <input type="text" id="noteInput" placeholder="Write a task..." maxlength="80" autocomplete="off">
+                <button type="submit" class="notes-add" title="Add task" aria-label="Add task">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </form>
+
+            <ul class="notes-list" id="notesList"></ul>
+
+            <p class="notes-empty" id="notesEmpty">No tasks yet — add your first one above.</p>
+        </div>
+
+    </aside>
+<!-- عنوان الصفحة  -->
+<main class="main">
+    <div class="page-title">
+    <div class="number-box">
+         <i class="fa-solid fa-lightbulb"></i>
+    </div>
+        <h1>Dashboard</h1>
+    </div>
+ <section class="welcome-card">
+
+    <div class="welcome-content">
+        <h2>Hello My friend</h2>
+
+        <p>
+            You have 3 new tasks. It is a lot of work for today!
+            So let's start!
+        </p>
+    </div>
+
+    <div class="welcome-image">
+        <img src="happy-news.svg.svg" alt="Student studying">
+    </div>
+
+</section>
+<!-- التالت كروت الي في النص المحتوي -->
+<section class="stats">
+    <article class="stat-card">
+    <div class="stat-icon blue">
+            <i class="fa-solid fa-shield-halved"></i>
+    </div>
+    <div class="stat-info">
+        <p>Readiness Score</p>
+            <h2>0%</h2>
+    </div>
+
+    <div class="cards">
+                                                                                                                                                                 <!-- ده بيستخدم لي الرسم البياني 
+                                                                                                                                                                  والفيوو بوكس ده الي بيشكل احداثيات الشكل اول رقم للطول التانب للعرض التالت بيشكل نقطة البداية والرابع بيشكل نقطة النهاية
+                                                                                                                                                                  السطر التاني المسوول عن امتداد الرسمه او صغرها
+                                                                                                                                                                  السطر التالت مسوول على الخطوانه يمر بين النقط الي عملنها
+                                                                                                                                                                  -->
+ <svg viewBox="0 0 300 70"
+  preserveAspectRatio="none">
+ <polyline
+  points="5,55 40,45 75,47 110,52 145,38 180,46 215,30 250,35 290,25"
+   fill="none"
+ stroke="currentColor"
+stroke-width="4"
+ stroke-linecap="round"
+stroke-linejoin="round" />
+ <circle cx="5" cy="55" r="4"></circle>
+<circle cx="290" cy="25" r="4"></circle>
+ </svg>
+    </div>
+
+</article>
+<article class="stat-card">
+     <div class="stat-icon green">
+        <i class="fa-regular fa-square-check"></i>
+    </div>
+    <div class="stat-info">
+         <p>Quizzes Completed</p>
+             <h2>0</h2>
+        <span class="week">
+            +0 this week
+        </span>
+ </div>
+</article>
+
+<article class="stat-card">
+    <div class="stat-icon purple">
+        <i class="fa-solid fa-gamepad"></i>
+    </div>
+    <div class="stat-info">
+        <p>Flashcards Reviewed</p>
+            <h2>0</h2>
+    <span class="increase purple-text">
+            +0 this week
+    </span>
+ </div>
+</article>
+</section>
+                                                                                                                           <!-- الجزء الي تحت هعملو سكشين-->
+
+<section class="lower-section">
+     <article class="subject-card">
+   <h2>Subject Progress</h2>
+<div class="subject"> -
+    <!-- هاخلي الجزء الي فوق البار لوحدو والبار لي وحدو -->
+    <div class="subject-header">
+        <span>HTML</span>
+    <div>
+         <b>0%</b>
+    <strong>+0%</strong>
+</div>
+ </div> 
+ <!-- هعمل ديف يجمع البار كل -->
+    <div class="progress-bar"> 
+        <!-- وهعمل ديف للأسكور الطالب  -->
+    <div class="progress-fill "
+        style="width:1%">
+</div>
+</div>
+</div>
+
+<div class="subject">
+<div class="subject-header">
+    <span>CSS</span>
+<div>
+        <b>0%</b>
+    <strong>+0%</strong>
+</div>
+</div>
+<div class="progress-bar">
+    <div class="progress-fill "
+    style="width:1%">
+</div>
+</div>
+</div>
+
+<div class="subject">
+<div class="subject-header">
+<span>JavaScript</span>
+<div>
+    <b>0%</b>
+    <strong>+0%</strong>
+    </div>
+</div>
+<div class="progress-bar">
+<div class="progress-fill "
+    style="width:1%">
+    </div>
+    </div>
+</div> 
+                                                           <!-- weekly goal -->
+ <article class="weekly-goal">
+<div class="weekly-content">
+<div class="weekly-header">
+        <div class="weekly-title">
+        <div class="weekly-icon">
+        <i class="fa-solid fa-bullseye"></i>
+</div>
+        <h2>Weekly Goal</h2>
+    </div>
+</div>
+     <p class="weekly-text">
+        Complete 0 study sessions this week
+    </p>
+    <div class="weekly-progress">
+    <div class="weekly-bar">
+        <div class="weekly-fill"></div>
+    </div>
+    <div class="weekly-number">
+         <strong>0 / 7</strong>
+        <span>0%</span>
+</div>
+</div>
+    <div class="weekly-date">
+    <i class="fa-regular fa-calendar"></i>
+<span>
+   This week: Aug 18 – Aug 24
+</span>
+    </div>
+</div>
+
+<div class="target">
+    <i class="fa-solid fa-bullseye"></i>
+</div>
+    </article>
+</article>
+
+                                                          <!-- topics-->
+<article class="subject-card ">
+<h2>Topics to Review Today</h2>
+                                                          <!-- topic 1 -->
+<div class="topics-item">
+<div class="topic-icon red">
+    <i class="fa-regular fa-file-lines"></i>
+</div>
+<div class="topic-info">
+    <h3>
+        HTML COLORS
+    </h3>
+    <p>
+        Performance:
+    <span class="red-text">0%</span>
+    </p>
+    <small>
+    Last studied: 0 days ago
+    </small>
+    </div>
+<button>
+        Review
+</button>
+</div>
+                                                            <!-- Topic 2 -->
+ <div class="topics-item">
+<div class="topic-icon orange">
+    <i class="fa-regular fa-square-check"></i>
+</div>
+    <div class="topic-info">
+     <h3>
+        CSS SYNTAX
+    </h3>
+    <p>
+        Performance:
+        <span class="orange-text">0%</span>
+    </p>
+<small>
+        Last studied: 0 days ago
+</small>
+</div>
+    <button>
+            Review
+    </button>
+</div>
+
+
+                                                             <!-- Topic 3 -->
+<div class="topics-item">
+    <div class="topic-icon green-topic">
+    <i class="fa-regular fa-folder-open"></i>
+</div>
+    <div class="topic-info">
+    <h3>
+            JavaScript Varibles
+    </h3>
+ <p>
+    Performance:
+    <span class="orange-text">0%</span>
+</p>
+    <small>
+    Last studied: 0 days ago
+    </small>
+ </div>
+    <button>
+        Review
+    </button>
+</div>
+
+    <button class="view-all">
+        View All Topics
+</button>
+</article>
+
+</section>
+
+        </main>
+
+    </div>
+
+</div>
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-logo">
+            <img
+                src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png"
+                alt="Mind Step"
+            >
+        </div>
+
+        <p class="footer-tagline">
+            Learn smarter. Remember better.
+        </p>
+
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">customer service</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        <p>&copy; 2026 Mind Step. All rights reserved.</p>
+    </div>
+
+</footer>
+
+<script src="js/dashboard.js"></script>
+<script src="js/mahy.js"></script>
+</body>
+</html>

@@ -1,0 +1,2287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/nav&footer.css">
+    <link rel="stylesheet" href="css/diagnostic-test.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<nav>
+
+    <div class="logo">
+        <img src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png" alt="Mind Step">
+    </div>
+
+    <ul class="nav-links">
+
+        <li><a href="index.html">HOME</a></li>
+
+        <li class="features-menu">
+            <a href="index.html#features">
+                Features
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <ul class="features-dropdown">
+                <li><a href="diagnostic-test.html" class="active">Knowledge Assessment</a></li>
+                <li><a href="result.html">Weakness Deduction</a></li>
+                <li><a href="study-plan.html">Personalized Study Plan</a></li>
+                <li><a href="flashcards.html">Smart Flash Cards</a></li>
+                <li><a href="material.html">MATERIALS</a></li>
+                <li><a href="challenges.html">CHALLENGES</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </li>
+
+        <li><a href="index.html#how-it-works">How It Works</a></li>
+        <li><a href="index.html#contact">CONTACT US</a></li>
+
+    </ul>
+
+    <div class="nav-actions">
+
+        <button onclick="toggleDarkMode()" class="dark-mode-btn" id="darkModeBtn" type="button">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <a href="login.html" class="nav-cta">LOGIN</a>
+        <a href="signup.html" class="nav-cta">SIGNUP</a>
+
+        <i onclick="showsidebar()" class="fa-solid fa-bars menu-icon"></i>
+
+    </div>
+
+    <div class="sidebar">
+
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png" alt="Mind Step">
+            </div>
+            <i onclick="hidesidebar()" class="fa-solid fa-xmark close-icon"></i>
+        </div>
+
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+
+            <li class="sidebar-features">
+                <a href="index.html#features">
+                    Features
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+
+                <ul class="sidebar-features-dropdown">
+                    <li><a href="diagnostic-test.html" class="active">Knowledge Assessment</a></li>
+                    <li><a href="result.html">Weakness Deduction</a></li>
+                    <li><a href="study-plan.html">Personalized Study Plan</a></li>
+                    <li><a href="flashcards.html">Smart Flash Cards</a></li>
+                    <li><a href="material.html">MATERIALS</a></li>
+                    <li><a href="challenges.html">CHALLENGES</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </li>
+
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="index.html#contact">CONTACT US</a></li>
+        </ul>
+
+        <div class="sidebar-buttons">
+            <a href="login.html" class="sider-cta">LOGIN</a>
+            <a href="signup.html" class="sider-cta">SIGNUP</a>
+        </div>
+
+    </div>
+
+</nav>
+
+
+    <header class="Header">
+        <!-- <div class="logo">
+            <img src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png" alt="Mind Step">
+        </div> -->
+
+        <div class="title">Diagnostic Test</div>
+
+<div class="header-actions">
+    <div class="Timer">
+         <i class="fa-regular fa-clock"></i>
+         <span>20:00</span>
+    </div>
+    <button class="exit">
+         <i class="fa-solid fa-arrow-right-from-bracket"></i>
+    <span>Exit Test</span>
+    </button>
+</div>
+
+
+<button class="menu-btn">
+    <i class="fa-solid fa-bars"></i>
+</button>
+</header>
+<!-- --------------------------------------------------------------------------- -->
+    <div class="container">
+
+<div class="side">
+<h2>Subjects</h2>
+
+<div class="CardActive">
+
+   <div class="info">
+    <div class="subject-icon html-icon"><i class="fa-solid fa-code"></i></div>
+       <span>HTML</span>
+       <span>1/10</span>
+   </div>
+
+   <div>
+    <div class="progress">
+       <div class="html-progress"></div>
+     </div>
+   </div>
+
+</div>
+
+<div class="Card">
+
+   <div class="info">
+    <div class="subject-icon css-icon"><i class="fa-solid fa-code"></i></div>
+       <span>Css</span>
+       <span>0/10</span>
+   </div>
+
+   <div>
+    <div class="progress">
+       <div class="css-progress"></div>
+     </div>
+   </div>
+
+</div>
+
+<div class="Card">
+
+   <div class="info">
+    <div class="subject-icon js-icon">JS</div>
+        <span class="subject-name">
+           JavaScript
+       </span>
+       <span>0/10</span>
+   </div>
+
+   <div>
+    <div class="progress">
+       <div class="js-progress"></div>
+     </div>
+   </div>
+
+</div>
+
+
+
+<div class="Quick-Tip">
+    <div class="tip-title">
+        <i class="fa-regular fa-lightbulb"></i>
+        <h3>Quick Tip</h3>
+    </div>
+    <p> Take your time and choose the answer you think is correct</p>
+</div>
+
+
+
+</div>
+<!-- ------------------------------------------- ------------------>
+ <section class="question-section ">
+<div class="question-header">
+
+    <div>
+        <span class="number">Question 1 of 30</span>
+    </div>
+
+    <div class="question-progress">
+       <div class="question-progressFill"></div>
+    </div>
+
+    <span class="percentage">0%</span>
+
+</div>
+<!-- //////////////////////////////////////////////////////////// -->
+
+<div class="questions">
+
+    <h1>What does HTML stand for?</h1>
+
+    <div class="answers">
+
+    <label class="option">
+   <input type="radio" name="answer1" value="A">
+     Hyper Trainer Marking Language
+     </label>
+
+     <label class="option">
+  <input type="radio" name="answer1" value="B">
+      HyperText Markup Language
+    </label>
+
+    <label class="option">
+  <input type="radio" name="answer1" value="C">
+      HyperText Machine Language
+    </label>
+
+   <label class="option">
+   <input type="radio" name="answer1" value="D">
+   HighText Markup Language
+    </label>
+
+</div>
+
+<!-- --------------------------------------------------- -->
+
+<div class="navigation">
+
+<button class="previous" type="button" >← previous</button>
+<button class="Next" type="button">Next →</button>
+ <div class="submit">
+<button class="submit-btn" type="button"> ✓ Submit Test</button>
+ </div> 
+ </div>
+</div>
+</section>
+
+<!-- //////////////////////السؤال الثاني ///////////////////////// -->
+
+<section class="question-section" id="question2">
+<div class="question-header">
+
+    <div>
+        <span class="number">Question 2 of 30</span>
+    </div>
+
+    <div class="question-progress">
+       <div class="question-progressFill"></div>
+    </div>
+
+    <span class="percentage">0%</span>
+
+</div>
+<!-- //////////////////////////////////////////////////////////// -->
+
+<div class="questions">
+
+    <h1> Which HTML tag is used to create a paragraph?</h1>
+
+<div class="answers">
+
+    <label class="option">
+        <input type="radio" name="answer2" value="A">
+        <span>A.  &lt;h1&gt;</span>
+    </label>
+
+    <label class="option">
+        <input type="radio" name="answer2" value="B">
+        <span>B. &lt;div&gt;</span>
+    </label>
+
+    <label class="option">
+        <input type="radio" name="answer2" value="C">
+        <span>C.  &lt;p&gt;</span>
+    </label>
+
+    <label class="option">
+        <input type="radio" name="answer2" value="D">
+        <span>D.  &lt;text&gt;</span>
+    </label>
+
+</div>
+
+
+
+<!-- --------------------------------------------------- -->
+
+<div class="navigation">
+
+<button class="previous" type="button">← previous</button>
+<button class="Next" type="button">Next →</button>
+ <div class="submit">
+<button class="submit-btn" type="button"> ✓ Submit Test</button>
+ </div> 
+ </div>
+</div>
+
+</section>
+<!-- ////////////////السؤال الثالث///////////////////// -->
+
+<section class="question-section" id="question3">
+<div class="question-header">
+
+    <div>
+        <span class="number">Question 3 of 30</span>
+    </div>
+
+    <div class="question-progress">
+       <div class="question-progressFill"></div>
+    </div>
+
+    <span class="percentage">0%</span>
+
+</div>
+<!-- //////////////////////////////////////////////////////////// -->
+
+<div class="questions">
+
+    <h1> Which tag is used to create a hyperlink?</h1>
+
+<div class="answers">
+
+      <label class="option">
+           <input type="radio" name="answer3" value="A">
+             &lt;link&gt;
+            </label>
+
+           <label class="option">
+           <input type="radio" name="answer3" value="B">
+             &lt;a&gt;
+             </label>
+
+             <label class="option">
+               <input type="radio" name="answer3" value="C">
+               &lt;href&gt;
+              </label>
+
+              <label class="option">
+                <input type="radio" name="answer3" value="D">
+               &lt;url&gt;
+              </label>
+
+</div>
+
+
+<!-- --------------------------------------------------- -->
+
+<div class="navigation">
+
+<button class="previous"type="button" >← previous</button>
+<button class="Next" type="button">Next →</button>
+ <div class="submit">
+<button class="submit-btn" type="button"> ✓ Submit Test</button>
+ </div> 
+ </div>
+</div>
+
+</section>
+<!-- ////////////////السؤال الرابع///////////////// -->
+  <section class="question-section">
+
+     <div class="question-header">
+      <span class="number">Question 4 of 30</span>
+      <div class="question-progress">
+      <div class="question-progressFill"></div>
+     </div>
+      <span class="percentage">10%</span>
+      </div>
+
+     <div class="questions">
+        <h1> Which tag is used to display an image? </h1>
+       <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer4" value="A">
+                        &lt;picture&gt;
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer4" value="B">
+                        &lt;image&gt;
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer4" value="C">
+                        &lt;img&gt;
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer4" value="D">
+                        &lt;src&gt;
+                    </label>
+
+        </div>
+
+                <div class="navigation">
+
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUESTION 5 -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+
+                <span class="number">Question 5 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">13%</span>
+
+            </div>
+
+            <div class="questions">
+
+                <h1>
+                    Which attribute specifies the URL of a link?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer5" value="A">
+                        src
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer5" value="B">
+                        href
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer5" value="C">
+                        link
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer5" value="D">
+                        url
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HTML 6 ================= -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+
+                <span class="number">Question 6 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">15%</span>
+
+            </div>
+
+            <div class="questions">
+
+
+                <h1>
+                    Which tag creates an unordered list?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer6" value="A">
+                        &lt;ol&gt;
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer6" value="B">
+                        &lt;list&gt;
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer6" value="C">
+                        &lt;ul&gt;
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer6" value="D">
+                        &lt;li&gt;
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HTML 7 -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+                <span class="number">Question 7 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">18%</span>
+            </div>
+
+            <div class="questions">
+
+                <h1>
+                    Which tag defines a table row?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer7" value="A">
+                        &lt;td&gt;
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer7" value="B">
+                        &lt;tr&gt;
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer7" value="C">
+                        &lt;table-row&gt;
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer7" value="D">
+                        &lt;row&gt;
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HTML 8 -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+                <span class="number">Question 8 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">20%</span>
+            </div>
+
+            <div class="questions">
+
+
+                <h1>
+                    Which tag defines the largest heading?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer8" value="A">
+                        &lt;heading&gt;
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer8" value="B">
+                        &lt;h1&gt;
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer8" value="C">
+                        &lt;h6&gt;
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer8" value="D">
+                        &lt;head&gt;
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HTML 9 -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+                <span class="number">Question 9 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">23%</span>
+            </div>
+
+            <div class="questions">
+
+               
+
+                <h1>
+                    Which attribute is used to provide alternative text for an image?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer9" value="A">
+                        title
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer9" value="B">
+                        alt
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer9" value="C">
+                        text
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer9" value="D">
+                        description
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HTML 10 -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+                <span class="number">Question 10 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">25%</span>
+            </div>
+
+            <div class="questions">
+
+
+                <h1>
+                    Which tag is used to create a line break?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer10" value="A">
+                        &lt;break&gt;
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer10" value="B">
+                        &lt;br&gt;
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer10" value="C">
+                        &lt;lb&gt;
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer10" value="D">
+                        &lt;line&gt;
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CSS 11
+             ===================================================== -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+                <span class="number">Question 11 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">28%</span>
+            </div>
+
+            <div class="questions">
+
+                <h1>
+                    What does CSS stand for?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer11" value="A">
+                        Creative Style Sheets
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer11" value="B">
+                        Cascading Style Sheets
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer11" value="C">
+                        Computer Style Sheets
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer11" value="D">
+                        Colorful Style Sheets
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CSS 12 -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+                <span class="number">Question 12 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">30%</span>
+            </div>
+
+            <div class="questions">
+
+             
+
+                <h1>
+                    Which CSS property changes text color?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer12" value="A">
+                        font-color
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer12" value="B">
+                        text-color
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer12" value="C">
+                        color
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer12" value="D">
+                        foreground
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CSS 13 -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+                <span class="number">Question 13 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">33%</span>
+            </div>
+
+            <div class="questions">
+
+              
+
+                <h1>
+                    Which property changes the background color?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer13" value="A">
+                        background-color
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer13" value="B">
+                        bgcolor
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer13" value="C">
+                        background
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer13" value="D">
+                        color-background
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CSS 14 -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+                <span class="number">Question 14 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">35%</span>
+            </div>
+
+            <div class="questions">
+
+
+                <h1>
+                    Which property is used to change the font size?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer14" value="A">
+                        text-size
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer14" value="B">
+                        font-size
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer14" value="C">
+                        font-height
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer14" value="D">
+                        size
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CSS 15 -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+                <span class="number">Question 15 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">38%</span>
+            </div>
+
+            <div class="questions">
+
+                <h1>
+                    Which CSS property controls the space inside an element?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer15" value="A">
+                        margin
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer15" value="B">
+                        padding
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer15" value="C">
+                        spacing
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer15" value="D">
+                        border
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CSS 16 -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+                <span class="number">Question 16 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">40%</span>
+            </div>
+
+            <div class="questions">
+
+
+                <h1>
+                    Which property makes an element a flex container?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer16" value="A">
+                        position: flex
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer16" value="B">
+                        display: flex
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer16" value="C">
+                        flex: display
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer16" value="D">
+                        display-flex
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CSS 17 -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+                <span class="number">Question 17 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">43%</span>
+            </div>
+
+            <div class="questions">
+
+
+                <h1>
+                    Which property is used to make text bold?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer17" value="A">
+                        text-weight
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer17" value="B">
+                        font-weight
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer17" value="C">
+                        font-style
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer17" value="D">
+                        bold
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CSS 18 -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+                <span class="number">Question 18 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">45%</span>
+            </div>
+
+            <div class="questions">
+
+             
+
+                <h1>
+                    Which property controls the space outside an element?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer18" value="A">
+                        margin
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer18" value="B">
+                        padding
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer18" value="C">
+                        space
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer18" value="D">
+                        outside
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CSS 19 -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+                <span class="number">Question 19 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">48%</span>
+            </div>
+
+            <div class="questions">
+
+
+                <h1>
+                    Which property rounds the corners of an element?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer19" value="A">
+                        corner-radius
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer19" value="B">
+                        border-radius
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer19" value="C">
+                        radius
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer19" value="D">
+                        border-corner
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CSS 20 -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+                <span class="number">Question 20 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">50%</span>
+            </div>
+
+            <div class="questions">
+
+                <h1>
+                    Which property is used to center text?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer20" value="A">
+                        align-text
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer20" value="B">
+                        text-align
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer20" value="C">
+                        text-center
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer20" value="D">
+                        align
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             JavaScript 21-30
+             ===================================================== -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+                <span class="number">Question 21 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">53%</span>
+            </div>
+
+            <div class="questions">
+
+                <h1>
+                    Which keyword declares a variable that can be reassigned?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer21" value="A">
+                        let
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer21" value="B">
+                        fixed
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer21" value="C">
+                        constant
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer21" value="D">
+                        static
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- JS 22 -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+                <span class="number">Question 22 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">55%</span>
+            </div>
+
+            <div class="questions">
+                
+
+                <h1>
+                    Which symbol is used for a single-line comment?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer22" value="A">
+                        &lt;!-- --&gt;
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer22" value="B">
+                        /*
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer22" value="C">
+                        //
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer22" value="D">
+                        #
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- JS 23 -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+                <span class="number">Question 23 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">58%</span>
+            </div>
+
+            <div class="questions">
+
+
+
+                <h1>
+                    Which method adds an element to the end of an array?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer23" value="A">
+                        add()
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer23" value="B">
+                        push()
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer23" value="C">
+                        append()
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer23" value="D">
+                        insert()
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- JS 24 -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+                <span class="number">Question 24 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">60%</span>
+            </div>
+
+            <div class="questions">
+
+                <h1>
+                    Which function converts a string to an integer?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer24" value="A">
+                        NumberString()
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer24" value="B">
+                        parseInt()
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer24" value="C">
+                        toInteger()
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer24" value="D">
+                        Integer()
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- JS 25 -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+                <span class="number">Question 25 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">63%</span>
+            </div>
+
+            <div class="questions">
+
+                <h1>
+                    Which operator checks both value and data type?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer25" value="A">
+                        =
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer25" value="B">
+                        ==
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer25" value="C">
+                        ===
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer25" value="D">
+                        !=
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- JS 26 -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+                <span class="number">Question 26 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">65%</span>
+            </div>
+
+            <div class="questions">
+
+                <h1>
+                    Which keyword defines a constant variable?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer26" value="A">
+                        var
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer26" value="B">
+                        let
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer26" value="C">
+                        const
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer26" value="D">
+                        fixed
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- JS 27 -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+                <span class="number">Question 27 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">68%</span>
+            </div>
+
+            <div class="questions">
+
+                <h1>
+                    Which method removes the last element from an array?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer27" value="A">
+                        remove()
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer27" value="B">
+                        pop()
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer27" value="C">
+                        delete()
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer27" value="D">
+                        last()
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- JS 28 -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+                <span class="number">Question 28 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">70%</span>
+            </div>
+
+            <div class="questions">
+
+                <h1>
+                    Which object represents the HTML document?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer28" value="A">
+                        window
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer28" value="B">
+                        document
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer28" value="C">
+                        html
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer28" value="D">
+                        page
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- JS 29 -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+                <span class="number">Question 29 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">73%</span>
+            </div>
+
+            <div class="questions">
+
+                <h1>
+                    Which method selects an element by its ID?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer29" value="A">
+                        querySelector()
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer29" value="B">
+                        getElementById()
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer29" value="C">
+                        getById()
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer29" value="D">
+                        selectId()
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- JS 30 -->
+
+        <section class="question-section">
+
+            <div class="question-header">
+                <span class="number">Question 30 of 30</span>
+
+                <div class="question-progress">
+                    <div class="question-progressFill"></div>
+                </div>
+
+                <span class="percentage">75%</span>
+            </div>
+
+            <div class="questions">
+
+                <h1>
+                    Which function prints a message in the console?
+                </h1>
+
+                <div class="answers">
+
+                    <label class="option">
+                        <input type="radio" name="answer30" value="A">
+                        print()
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer30" value="B">
+                        console.log()
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer30" value="C">
+                        display()
+                    </label>
+
+                    <label class="option">
+                        <input type="radio" name="answer30" value="D">
+                        writeConsole()
+                    </label>
+
+                </div>
+
+                <div class="navigation">
+
+                    <button class="previous">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous
+                    </button>
+
+                    <button class="Next">
+                        Next
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="submit">
+                        <button class="submit-btn">
+                            Submit
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+</div>
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-logo">
+            <img
+                src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png"
+                alt="Mind Step"
+            >
+        </div>
+
+        <p class="footer-tagline">
+            Learn smarter. Remember better.
+        </p>
+
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">customer service</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        <p>&copy; 2026 Mind Step. All rights reserved.</p>
+    </div>
+
+</footer>
+
+    <script src="js/diagnostic.js"></script>
+    <script src="js/mahy.js"></script>
+</body>
+</html>

@@ -1,0 +1,449 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Tahoma, sans-serif;
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+/* =========================================================
+   CATEGORY TABS  (HTML / CSS / JavaScript)
+========================================================= */
+
+.category-bar {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    border-bottom: 1px solid #e8e8ef;
+    position: sticky;
+    top: 79px;
+    z-index: 90;
+}
+
+.category-bar-inner {
+    max-width: 1400px;
+    margin: auto;
+    padding: 12px 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    overflow-x: auto;
+}
+
+.category-link {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #d9d9e8;
+    background: white;
+    color: #162341;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.25s;
+}
+
+.category-link:hover {
+    color: #6366f1;
+    border-color: #6366f1;
+}
+
+.category-link.active {
+    color: white;
+    border-color: transparent;
+    background: linear-gradient(90deg, #4267ff, #8b4dff);
+}
+
+
+                           /*  Material */
+
+.material-container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 45px 30px 70px;
+}
+
+
+                                                                     /* title */
+
+.page-title {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeIn 0.6s ease both;
+}
+
+.page-title h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    background: linear-gradient(
+        135deg,
+        #4267ff,
+        #8b4dff
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.page-title p {
+    color: #0f172a;
+    font-size: 15px;
+}
+
+
+                                         /* Viduo Grid */
+
+.videos-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+    gap: 25px;
+}
+
+                                          /*card */
+
+.video-card {
+    display: block;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #e8e8ef;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+    box-shadow: 0 5px 18px rgba(40, 40, 80, 0.06);
+    animation: fadeIn 0.5s ease both;
+}
+.video-card:hover {
+    transform: translateY(-7px);
+    box-shadow:
+        0 15px 35px rgba(60, 60, 120, 0.14);
+}
+
+                                                          /* thumbnail */
+
+.thumbnail {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.thumbnail::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15, 10, 40, 0) 55%, rgba(15, 10, 40, 0.55) 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.video-card:hover .thumbnail::after {
+    opacity: 1;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s;
+}
+
+.video-card:hover .thumbnail img {
+    transform: scale(1.05);
+}
+
+/* Play */
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.85);
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: linear-gradient(
+        135deg,
+        #4267ff,
+        #8b4dff
+    );
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.video-card:hover .play-button {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.play-button i {
+    font-size: 20px;
+
+    margin-right: -3px;
+}
+
+
+                                                       /* duration */
+
+.duration {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 1;
+}
+
+                                           /* card content */
+
+.card-content {
+    padding: 18px;
+}
+
+.card-content h2 {
+    font-size: 17px;
+    margin-bottom: 13px;
+    color: #29293d;
+    line-height: 1.5;
+}
+
+.teacher {
+    color: #77778a;
+    font-size: 13px;
+    margin-bottom: 17px;
+}
+
+.teacher i {
+    margin-left: 5px;
+    color: #6754ff;
+}
+
+
+                                   /* Card Footer */
+
+.card-footer {
+    border-top: 1px solid #eeeeee;
+    padding-top: 13px;
+    display: flex;
+    justify-content: space-between;
+    color: #888899;
+    font-size: 12px;
+}
+
+.card-footer i {
+    color: #6754ff;
+    margin-left: 4px;
+}
+
+
+.previous-btn {
+    padding: 12px 35px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(
+        90deg,
+        #6366F1,
+        #3B82F6
+    );
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+     transition: 0.3s;
+}
+.previous-btn i {
+    margin-left: 8px;
+}
+
+.previous-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+
+.next-btn {
+    padding: 12px 35px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(
+        90deg,
+        #6366F1,
+        #3B82F6
+    );
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+     transition: 0.3s;
+}
+.next-btn i {
+    margin-left: 8px;
+}
+
+.next-btn:hover {
+    transform: translateY(-2px);
+
+}
+
+.bottom-navigation {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 40px auto 0;
+    padding: 0 30px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .video-card,
+    .page-title,
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+
+                                                                 /* ================= responsive ================= */
+
+@media (max-width: 1000px) {
+
+    .videos-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .category-bar {
+        top: 70px;
+    }
+
+    .category-bar-inner {
+        padding: 10px 22px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .material-container {
+        padding: 30px 15px;
+    }
+
+    .page-title h1 {
+        font-size: 25px;
+    }
+
+    .videos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .thumbnail {
+        height: 230px;
+    }
+
+    .category-bar {
+        top: 68px;
+    }
+
+    .category-bar-inner {
+        padding: 10px 15px;
+    }
+
+    .category-link {
+        padding: 9px 14px;
+        font-size: 13px;
+    }
+
+    .bottom-navigation {
+        padding: 0 15px;
+    }
+
+    .previous-btn,
+    .next-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   DARK MODE — Material page
+========================================================= */
+
+body.dark-mode {
+    background: #15162b;
+    color: #e7e7f5;
+}
+
+body.dark-mode .page-title p {
+    color: #b8bad0;
+}
+
+body.dark-mode .category-bar {
+    background: #20213d;
+    border-bottom-color: #303152;
+}
+
+body.dark-mode .category-link {
+    background: #262752;
+    color: #b8bad0;
+    border-color: #363754;
+}
+
+body.dark-mode .category-link:hover {
+    color: #a99fff;
+    border-color: #a99fff;
+}
+
+body.dark-mode .category-link.active {
+    background: linear-gradient(90deg, #4267ff, #8b4dff);
+    color: #ffffff;
+}
+
+body.dark-mode .video-card {
+    background: #20213d;
+    border-color: #303152;
+}
+
+body.dark-mode .card-content h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .teacher {
+    color: #9a9cc0;
+}
+
+body.dark-mode .card-footer {
+    border-top-color: #303152;
+    color: #9a9cc0;
+}

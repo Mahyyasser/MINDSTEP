@@ -1,0 +1,1375 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: #f8faff;
+
+    color: #29234a;
+
+    min-height: 100vh;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: white;
+
+    border-bottom: 1px solid #e5e7f5;
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+
+.logo span {
+
+    color: #7354d8;
+
+    font-size: 25px;
+}
+
+
+.header nav {
+
+    display: flex;
+
+    gap: 30px;
+}
+
+
+.header nav a {
+
+    color: #77758a;
+
+    text-decoration: none;
+
+    font-size: 15px;
+}
+
+
+.header nav a:hover,
+.header nav a.active {
+
+    color: #7354d8;
+}
+
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.container {
+
+    width: 86%;
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 45px 0;
+}
+
+
+.page-title {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.small-title {
+
+    color: #7354d8;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+
+.page-title h1 {
+
+    font-size: 40px;
+
+    margin-bottom: 10px;
+
+    color: #29234a;
+}
+
+
+.description {
+
+    color: #77758a;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   SUBJECTS
+========================= */
+
+.subjects {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+
+.subject-btn {
+
+    padding: 10px 22px;
+
+    border: 1px solid #dce3f2;
+
+    background: white;
+
+    color: #66687a;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+
+.subject-btn:hover {
+
+    border-color: #8062e8;
+
+    color: #7354d8;
+}
+
+
+.subject-btn.active {
+
+    color: white;
+
+    border-color: transparent;
+
+    background: linear-gradient(
+        135deg,
+        #79d8ef,
+        #8062e8
+    );
+}
+
+
+/* =========================
+   LAYOUT
+========================= */
+
+.task-layout {
+
+    display: grid;
+
+    grid-template-columns: 1fr 290px;
+
+    gap: 25px;
+
+    align-items: start;
+}
+
+
+/* =========================
+   TASK CARD
+========================= */
+
+.task-card {
+
+    background: white;
+
+    border: 1px solid #e5e7f5;
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(100, 90, 150, 0.06);
+}
+
+
+.task-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    padding-bottom: 22px;
+
+    border-bottom: 1px solid #e8e8f2;
+}
+
+
+.task-number {
+
+    color: #7354d8;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+.task-header h2 {
+
+    font-size: 27px;
+
+    margin-top: 7px;
+}
+
+
+/* =========================
+   LEVELS
+========================= */
+
+.difficulty {
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.difficulty.easy {
+
+    color: #15803d;
+
+    background: #dcfce7;
+}
+
+
+.difficulty.medium {
+
+    color: #b45309;
+
+    background: #fef3c7;
+}
+
+
+.difficulty.hard {
+
+    color: #dc2626;
+
+    background: #fee2e2;
+}
+
+
+.difficulty.final {
+
+    color: #7c3aed;
+
+    background: #ede9fe;
+}
+
+
+/* =========================
+   INSTRUCTIONS
+========================= */
+
+.instructions {
+
+    padding: 25px 0;
+}
+
+
+.instructions h3 {
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+
+.instructions > p {
+
+    color: #66687a;
+
+    line-height: 1.7;
+
+    margin-bottom: 18px;
+}
+
+
+.requirements {
+
+    background: #f2f7ff;
+
+    border-left: 3px solid #8062e8;
+
+    border-radius: 10px;
+
+    padding: 17px;
+}
+
+
+.requirements p {
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+.requirements ul {
+
+    padding-left: 20px;
+
+    color: #686b7d;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   EDITOR
+========================= */
+
+.editor-container {
+
+    border: 1px solid #302a44;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    background: #0f0d18;
+}
+
+
+.editor-header {
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 15px;
+
+    background: #1b1727;
+
+    border-bottom: 1px solid #302a44;
+}
+
+
+.editor-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.dot {
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    display: inline-block;
+}
+
+
+.red {
+
+    background: #ff5f57;
+}
+
+
+.yellow {
+
+    background: #ffbd2e;
+}
+
+
+.green {
+
+    background: #28c840;
+}
+
+
+.file-name {
+
+    color: #aaa4ba;
+
+    font-size: 13px;
+
+    margin-left: 7px;
+}
+
+
+.language {
+
+    color: #8b7bea;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   TEXT AREA
+========================= */
+
+.editor {
+
+    height: 380px;
+
+    background: #0f0d18;
+}
+
+
+#codeEditor {
+
+    width: 100%;
+
+    height: 100%;
+
+    padding: 20px;
+
+    resize: none;
+
+    border: none;
+
+    outline: none;
+
+    background: #0f0d18;
+
+    color: #e9e6f4;
+
+    caret-color: white;
+
+    font-family: Consolas, monospace;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+#codeEditor::placeholder {
+
+    color: #686174;
+}
+
+
+#codeEditor::selection {
+
+    background: rgba(
+        128,
+        98,
+        232,
+        0.35
+    );
+}
+
+
+/* =========================
+   CHECK BUTTON
+========================= */
+
+.action-buttons {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-top: 18px;
+}
+
+
+.check-btn {
+
+    border: none;
+
+    background: linear-gradient(
+        135deg,
+        #73d5ec,
+        #8062e8
+    );
+
+    color: white;
+
+    padding: 13px 22px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+
+.check-btn:hover {
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 15px
+        rgba(128, 98, 232, 0.2);
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-card {
+
+    background: white;
+
+    border: 1px solid #e5e7f5;
+
+    border-radius: 18px;
+
+    padding: 24px;
+
+    position: sticky;
+
+    top: 20px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(100, 90, 150, 0.06);
+}
+
+
+.progress-card h3 {
+
+    margin-bottom: 25px;
+}
+
+
+.progress-info {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+
+.progress-info div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.progress-info span {
+
+    color: #85879a;
+
+    font-size: 12px;
+}
+
+
+.progress-info strong {
+
+    font-size: 22px;
+}
+
+
+.progress-bar {
+
+    height: 8px;
+
+    background: #e6e9f5;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+.progress-fill {
+
+    height: 100%;
+
+    width: 25%;
+
+    background: linear-gradient(
+        90deg,
+        #79d8ef,
+        #8062e8
+    );
+
+    transition: 0.4s;
+}
+
+
+.progress-text {
+
+    color: #85879a;
+
+    font-size: 12px;
+
+    margin-top: 9px;
+}
+
+
+.level {
+
+    margin-top: 28px;
+
+    padding: 15px;
+
+    background: #f3f7ff;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.level span {
+
+    color: #85879a;
+
+    font-size: 12px;
+}
+
+
+.level strong {
+
+    color: #7354d8;
+}
+
+
+.tip {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding: 13px;
+
+    background: #f3f7ff;
+
+    border-radius: 10px;
+}
+
+
+.tip p {
+
+    color: #686b7d;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.task-navigation {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 20px;
+}
+
+
+.nav-btn {
+
+    background: white;
+
+    color: #514c69;
+
+    border: 1px solid #dfe3f1;
+
+    padding: 11px 18px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.nav-btn:hover {
+
+    border-color: #8062e8;
+
+    color: #7354d8;
+
+    background: #faf9ff;
+}
+
+
+#taskCounter {
+
+    color: #888294;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    background: rgba(
+        30,
+        25,
+        50,
+        0.65
+    );
+
+    z-index: 1000;
+}
+
+
+.modal.show {
+
+    display: flex;
+}
+
+
+.result-card {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    max-height: 92vh;
+
+    overflow-y: auto;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    position: relative;
+}
+
+
+/* =========================
+   CLOSE
+========================= */
+
+.close-btn {
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 20px;
+
+    width: 35px;
+
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #eef1fa;
+
+    color: #514c69;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+
+.close-btn:hover {
+
+    background: #8062e8;
+
+    color: white;
+}
+
+
+/* =========================
+   RESULT TITLE
+========================= */
+
+.result-title {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.compare-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eeeaff;
+
+    color: #7354d8;
+
+    font-weight: bold;
+}
+
+
+.result-title h2 {
+
+    margin-top: 13px;
+
+    font-size: 25px;
+}
+
+
+.result-title p {
+
+    color: #8f899e;
+
+    margin-top: 8px;
+}
+
+
+/* =========================
+   COMPARISON
+========================= */
+
+.comparison {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+.solution-box {
+
+    border: 1px solid #302a44;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    background: #0b0911;
+}
+
+
+.solution-header {
+
+    padding: 14px 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: #1b1727;
+}
+
+
+.solution-header h3 {
+
+    color: white;
+
+    font-size: 14px;
+}
+
+
+.your-label,
+.correct-label {
+
+    font-size: 11px;
+
+    padding: 5px 9px;
+
+    border-radius: 10px;
+}
+
+
+.your-label {
+
+    color: #fbbf24;
+
+    background: rgba(
+        251,
+        191,
+        36,
+        0.1
+    );
+}
+
+
+.correct-label {
+
+    color: #4ade80;
+
+    background: rgba(
+        74,
+        222,
+        128,
+        0.1
+    );
+}
+
+
+.solution-box pre {
+
+    margin: 0;
+
+    padding: 20px;
+
+    min-height: 250px;
+
+    max-height: 350px;
+
+    overflow: auto;
+
+    font-family: Consolas, monospace;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   OUTPUT
+========================= */
+
+.output-section {
+
+    margin-top: 25px;
+
+    border: 1px solid #dfe3f1;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    background: white;
+}
+
+
+.output-header {
+
+    padding: 15px 18px;
+
+    background: #f3f7ff;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.output-header h3 {
+
+    font-size: 15px;
+
+    margin-bottom: 5px;
+}
+
+
+.output-header p {
+
+    color: #888294;
+
+    font-size: 12px;
+}
+
+
+.output-label {
+
+    color: #7354d8;
+
+    background: #eeeaff;
+
+    padding: 6px 10px;
+
+    border-radius: 10px;
+
+    font-size: 11px;
+}
+
+
+.output-image-container {
+
+    padding: 20px;
+
+    background: #fafbff;
+
+    text-align: center;
+}
+
+
+.output-image-container img {
+
+    display: block;
+
+    max-width: 100%;
+
+    max-height: 450px;
+
+    margin: auto;
+
+    border-radius: 10px;
+
+    border: 1px solid #e1e4f0;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   RESULT BUTTONS
+========================= */
+
+.result-actions {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+
+.back-btn,
+.next-result-btn {
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+.back-btn {
+
+    background: #eef1fa;
+
+    color: #514c69;
+}
+
+
+.next-result-btn {
+
+    background: linear-gradient(
+        135deg,
+        #73d5ec,
+        #8062e8
+    );
+
+    color: white;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .task-layout {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .progress-card {
+
+        position: static;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .comparison {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .subjects {
+
+        flex-wrap: wrap;
+    }
+
+
+    .task-header {
+
+        gap: 15px;
+    }
+
+
+    .check-btn {
+
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+
+        width: 92%;
+    }
+
+
+    .header {
+
+        padding: 0 4%;
+    }
+
+
+    .header nav {
+
+        gap: 12px;
+    }
+
+
+    .page-title h1 {
+
+        font-size: 32px;
+    }
+
+
+    .task-card {
+
+        padding: 20px;
+    }
+
+
+    .result-card {
+
+        padding: 20px;
+    }
+
+}
+
+
+
+/* =========================================================
+   DARK MODE — Challenges page
+========================================================= */
+
+body.dark-mode {
+    background: #15162b;
+    color: #e7e7f5;
+}
+
+body.dark-mode .task-card,
+body.dark-mode .progress-card,
+body.dark-mode .result-card {
+    background: #20213d;
+    border-color: #303152;
+}
+
+body.dark-mode .task-header {
+    border-bottom-color: #303152;
+}
+
+body.dark-mode .task-header h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .instructions h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .instructions > p {
+    color: #b8bad0;
+}
+
+body.dark-mode .requirements {
+    background: #262752;
+    border-left-color: #8062e8;
+}
+
+body.dark-mode .requirements p {
+    color: #ffffff;
+}
+
+body.dark-mode .requirements ul {
+    color: #b8bad0;
+}
+
+body.dark-mode .subject-btn {
+    background: #20213d;
+    border-color: #303152;
+    color: #b8bad0;
+}
+
+body.dark-mode .subject-btn:hover {
+    color: #a99fff;
+    border-color: #8062e8;
+}
+
+body.dark-mode .nav-btn {
+    background: #20213d;
+    border-color: #303152;
+    color: #b8bad0;
+}
+
+body.dark-mode .progress-card h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .progress-info span {
+    color: #9a9cc0;
+}
+
+body.dark-mode .progress-bar {
+    background: #303152;
+}
+
+body.dark-mode .level,
+body.dark-mode .tip {
+    background: #262752;
+}
+
+body.dark-mode .tip p {
+    color: #b8bad0;
+}
+
+body.dark-mode #taskCounter {
+    color: #9a9cc0;
+}
+
+body.dark-mode .output-section {
+    background: #20213d;
+    border-color: #303152;
+}
+
+body.dark-mode .output-header {
+    background: #262752;
+}
+
+body.dark-mode .output-header p {
+    color: #9a9cc0;
+}
+
+body.dark-mode .back-btn,
+body.dark-mode .close-btn {
+    background: #262752;
+    color: #e7e7f5;
+}

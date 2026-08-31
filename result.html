@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results / Analysis</title>
+    <link rel="stylesheet" href="css/result.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="exit-btn">
+          ↩ Exit
+        </a>
+    </header>
+        <div class="results-container">
+            <div class="progress-card">
+                <h1 class="Result">Your Results</h1>
+                <div class="progress-circle">
+                    <svg viewBox="0 0 200 120">
+                        <defs>
+                            <linearGradient id="gradient" x1="0%"y1="0%"x2="100%"y2="0%">
+                                <stop offset="0%" stop-color="#7c3aed"/>
+                                <stop offset="50%" stop-color="#2563eb"/>
+                                <stop offset="100%" stop-color="#5ecadd"/>
+                            </linearGradient>
+                        </defs>
+                        <path class="progress-bg" d="M 20 100 A 80 80 0 0 1 180 100"/>
+                        <path class="progress-value" id="overallProgress" d="M 20 100 A 80 80 0 0 1 180 100"/>
+                    </svg>
+                    <div class="circle-percentage">
+                        <span id="overallScore">0</span>
+                        <span>%</span>
+                    </div>
+                </div>
+                <p class="message" id="resultMessage"></p>
+                <a href="review.html"class="review">←Review Your Answers</a>
+                <a href="study-plan.html" class="study-plan-btn">View Study Plan</a>
+            </div>
+            <div class="subjects">
+                <h2 class="subject-title">Subject Performance</h2>
+                <div class="subject">
+                    <span class="subject-name html-color">HTML</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill html-bar" id="htmlBar"> </div>
+                    </div>
+                    <span class="subject-percentage html-color"id="htmlPercentage"></span>
+                </div>
+                <div class="subject">
+                    <span class="subject-name css-color"> CSS </span>
+                    <div class="progress-bar">
+                        <div class="progress-fill css-bar" id="cssBar"> </div>
+                    </div>
+                    <span class="subject-percentage css-color" id="cssPercentage"> </span>
+                </div>
+                <div class="subject">
+                    <span class="subject-name js-color"> JavaScript </span>
+                    <div class="progress-bar">
+                        <div class="progress-fill js-bar"id="javascriptBar"> </div>
+                    </div>
+                    <span class="subject-percentage js-color" id="javascriptPercentage"> </span>
+                </div>
+            </div>
+        </div>
+    <script src="js/result.js"></script>
+</body>
+</html>

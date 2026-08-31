@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Material | Let's go learn</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/nav&footer.css">
+    <link rel="stylesheet" href="css/material.css">
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        <img src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png" alt="Mind Step">
+    </div>
+
+    <ul class="nav-links">
+
+        <li><a href="index.html">HOME</a></li>
+
+        <li class="features-menu">
+            <a href="index.html#features">
+                Features
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <ul class="features-dropdown">
+                <li><a href="diagnostic-test.html">Knowledge Assessment</a></li>
+                <li><a href="result.html">Weakness Deduction</a></li>
+                <li><a href="study-plan.html">Personalized Study Plan</a></li>
+                <li><a href="flashcards.html">Smart Flash Cards</a></li>
+                <li><a href="material.html" class="active">MATERIALS</a></li>
+                <li><a href="challenges.html">CHALLENGES</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </li>
+
+        <li><a href="index.html#how-it-works">How It Works</a></li>
+        <li><a href="index.html#contact">CONTACT US</a></li>
+
+    </ul>
+
+    <div class="nav-actions">
+
+        <button onclick="toggleDarkMode()" class="dark-mode-btn" id="darkModeBtn" type="button">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <a href="login.html" class="nav-cta">LOGIN</a>
+        <a href="signup.html" class="nav-cta">SIGNUP</a>
+
+        <i onclick="showsidebar()" class="fa-solid fa-bars menu-icon"></i>
+
+    </div>
+
+    <div class="sidebar">
+
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png" alt="Mind Step">
+            </div>
+            <i onclick="hidesidebar()" class="fa-solid fa-xmark close-icon"></i>
+        </div>
+
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+
+            <li class="sidebar-features">
+                <a href="index.html#features">
+                    Features
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+
+                <ul class="sidebar-features-dropdown">
+                    <li><a href="diagnostic-test.html">Knowledge Assessment</a></li>
+                    <li><a href="result.html">Weakness Deduction</a></li>
+                    <li><a href="study-plan.html">Personalized Study Plan</a></li>
+                    <li><a href="flashcards.html">Smart Flash Cards</a></li>
+                    <li><a href="material.html">MATERIALS</a></li>
+                    <li><a href="challenges.html">CHALLENGES</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </li>
+
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="index.html#contact">CONTACT US</a></li>
+        </ul>
+
+        <div class="sidebar-buttons">
+            <a href="login.html" class="sider-cta">LOGIN</a>
+            <a href="signup.html" class="sider-cta">SIGNUP</a>
+        </div>
+
+    </div>
+
+</nav>
+
+                                                          <!-- Category tabs (HTML / CSS / JS) -->
+<div class="category-bar">
+    <div class="category-bar-inner">
+
+        <button type="button" class="category-link active" data-target="videosGrid" onclick="showSection('videosGrid')">
+            <i class="fa-brands fa-html5"></i> HTML
+        </button>
+
+        <button type="button" class="category-link" data-target="videosGrid2" onclick="showSection('videosGrid2')">
+            <i class="fa-brands fa-css3-alt"></i> CSS
+        </button>
+
+        <button type="button" class="category-link" data-target="videosGrid3" onclick="showSection('videosGrid3')">
+            <i class="fa-brands fa-js"></i> JavaScript
+        </button>
+
+    </div>
+</div>
+
+                                                                                  <!-- Material-->
+
+<main class="material-container">
+ <div class="page-title">
+  <h1>Let's go learn</h1>
+ <p>Watch the educational videos and start your learning journey</p>
+ </div>
+                                                                                 <!--  HTML VIDEOS  -->
+<section class="videos-grid" id="videosGrid">
+                                                                               <!-- card 1 -->
+<a href="materialvid.html?id=html-introduction" class="video-card" id="video1html">
+    <div class="thumbnail">
+    <img src="htmlv/intro 1.jpeg" alt="HTML Introduction">
+     <div class="play-button"><i class="fa-solid fa-play"></i></div>
+    <span class="duration">3:14</span>
+    </div>
+    <div class="card-content">
+    <h2>HTML Introduction</h2>
+    <p class="teacher"><i class="fa-solid fa-user"></i> Ahmed Radwan</p>
+    <div class="card-footer">
+ <span><i class="fa-brands fa-html5"></i> HTML</span>
+    </div>
+</div>
+ </a>
+
+                                                                                      <!-- card 2 -->
+  <a href="materialvid.html?id=html-editors" class="video-card">
+  <div class="thumbnail">
+     <img src="htmlv/editors 2.jpeg" alt="HTML Editors">
+    <div class="play-button"><i class="fa-solid fa-play"></i></div>
+    <span class="duration">1:28</span>
+ </div>
+<div class="card-content">
+<h2>HTML Editors</h2>
+    <p class="teacher"><i class="fa-solid fa-user"></i> Mahi Mohamed</p>
+ <div class="card-footer">
+    <span><i class="fa-brands fa-html5"></i> HTML</span>
+  </div>
+</div>
+</a>
+
+                                                                 <!-- card 3 -->
+<a href="materialvid.html?id=html-element" class="video-card">
+    <div class="thumbnail">
+    <img src="htmlv/element 3.jpeg" alt="HTML Element">
+<div class="play-button"><i class="fa-solid fa-play"></i></div>
+     <span class="duration">2:17</span>
+</div>
+ <div class="card-content">
+    <h2>HTML Element</h2>
+    <p class="teacher"><i class="fa-solid fa-user"></i> Medhat Al-Hosary</p>
+<div class="card-footer">
+     <span><i class="fa-brands fa-html5"></i> HTML</span>
+</div>
+</div>
+</a>
+
+                                                                             <!-- card 4 -->
+<a href="materialvid.html?id=html-attributes" class="video-card">
+    <div class="thumbnail">
+<img src="htmlv/attrbutes 4.jpeg" alt="HTML Attributes">
+<div class="play-button"><i class="fa-solid fa-play"></i></div>
+    <span class="duration">1:47</span>
+</div>
+<div class="card-content">
+<h2>HTML Attributes</h2>
+<p class="teacher"><i class="fa-solid fa-user"></i> Mahi Mohamed</p>
+<div class="card-footer">
+<span><i class="fa-brands fa-html5"></i> HTML</span>
+    </div>
+    </div>
+</a>
+
+                                                             <!-- card 5 -->
+<a href="materialvid.html?id=html-image" class="video-card">
+    <div class="thumbnail">
+<img src="htmlv/images 5.jpeg" alt="HTML Image">
+    <div class="play-button"><i class="fa-solid fa-play"></i></div>
+<span class="duration">3:47</span>
+    </div>
+<div class="card-content">
+ <h2>HTML Image</h2>
+ <p class="teacher"><i class="fa-solid fa-user"></i> Medhat Al-Hosary</p>
+<div class="card-footer">
+    <span><i class="fa-brands fa-html5"></i> HTML</span>
+</div>
+</div>
+</a>
+
+                                                                      <!-- card 6 -->
+<a href="materialvid.html?id=html-formatting" class="video-card">
+    <div class="thumbnail">
+<img src="htmlv/formatting 6.jpeg" alt="HTML Formatting">
+    <div class="play-button"><i class="fa-solid fa-play"></i></div>
+    <span class="duration">5:47</span>
+</div>
+<div class="card-content">
+<h2>HTML Formatting</h2>
+    <p class="teacher"><i class="fa-solid fa-user"></i> Ahmed Radwan</p>
+<div class="card-footer">
+    <span><i class="fa-brands fa-html5"></i> HTML</span>
+    </div>
+</div>
+</a>
+</section>
+
+                                                                               <!-- CSS VIDEOS  -->
+<section class="videos-grid" id="videosGrid2">
+
+                                                               <!-- card 1 -->
+ <a href="materialvid.html?id=css-introduction" class="video-card">
+    <div class="thumbnail">
+    <img src="cssv/intro css 1.jpeg" alt="Css Introduction">
+<div class="play-button"><i class="fa-solid fa-play"></i></div>
+    <span class="duration">5:00</span>
+</div>
+    <div class="card-content">
+<h2>Css Introduction</h2>
+    <p class="teacher"><i class="fa-solid fa-user"></i> Mohammed Alaa</p>
+    <div class="card-footer">
+     <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+    </div>
+    </div>
+ </a>
+
+                                                     <!-- card 2 -->
+<a href="materialvid.html?id=css-syntax" class="video-card">
+    <div class="thumbnail">
+<img src="cssv/syntax 2.jpeg" alt="Css Syntax">
+<div class="play-button"><i class="fa-solid fa-play"></i></div>
+<span class="duration">5:28</span>
+</div>
+<div class="card-content">
+<h2>Css Syntax</h2>
+<p class="teacher"><i class="fa-solid fa-user"></i> Ibtihal Said</p>
+<div class="card-footer">
+<span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+    </div>
+</div>
+</a>
+
+                                                     <!-- card 3 -->
+<a href="materialvid.html?id=css-colors" class="video-card">
+     <div class="thumbnail">
+    <img src="cssv/colors 3.jpeg" alt="Css Colors">
+    <div class="play-button"><i class="fa-solid fa-play"></i></div>
+<span class="duration">3:00</span>
+</div>
+    <div class="card-content">
+ <h2>Css Colors</h2>
+    <p class="teacher"><i class="fa-solid fa-user"></i> Medhat Al-Hosary</p>
+<div class="card-footer">
+<span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+</div>
+</div>
+</a>
+
+                                                        <!-- card 4 -->
+<a href="materialvid.html?id=css-comments" class="video-card">
+<div class="thumbnail">
+<img src="cssv/comment 4.jpeg" alt="Css Comments">
+<div class="play-button"><i class="fa-solid fa-play"></i></div>
+<span class="duration">1:00</span>
+</div>
+<div class="card-content">
+<h2>Css Comments</h2>
+<p class="teacher"><i class="fa-solid fa-user"></i> Ibtihal Said</p>
+<div class="card-footer">
+    <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+</div>
+</div>
+</a>
+
+                                                         <!-- card 5 -->
+<a href="materialvid.html?id=css-add-to-html" class="video-card">
+    <div class="thumbnail">
+    <img src="cssv/how to css 5.jpeg" alt="How To Add Css to Html">
+    <div class="play-button"><i class="fa-solid fa-play"></i></div>
+    <span class="duration">2:00</span>
+</div>
+    <div class="card-content">
+    <h2>How To Add Css to Html</h2>
+    <p class="teacher"><i class="fa-solid fa-user"></i> Mohammed Alaa</p>
+    <div class="card-footer">
+    <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+    </div>
+</div>
+</a>
+
+                                                            <!-- card 6 -->
+<a href="materialvid.html?id=css-rgb-rgba" class="video-card">
+    <div class="thumbnail">
+        <img src="cssv/rgb&rgba 6.jpeg" alt="Css RGB &amp; RGBA">
+     <div class="play-button"><i class="fa-solid fa-play"></i></div>
+ <span class="duration">3:00</span>
+ </div>
+<div class="card-content">
+<h2>Css RGB &amp; RGBA</h2>
+<p class="teacher"><i class="fa-solid fa-user"></i> Medhat Al-Hosary</p>
+<div class="card-footer">
+<span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+</div>
+</div>
+</a>
+</section>
+
+                                                                          <!--  js -->
+<section class="videos-grid" id="videosGrid3">
+
+                                                      <!-- card 1 -->
+ <a href="materialvid.html?id=js-introduction" class="video-card">
+<div class="thumbnail">
+ <img src="jsv/intro js 1.jpeg" alt="JavaScript Introduction">
+<div class="play-button"><i class="fa-solid fa-play"></i></div>
+<span class="duration">5:00</span>
+</div>
+<div class="card-content">
+<h2>JavaScript Introduction</h2>
+<p class="teacher"><i class="fa-solid fa-user"></i> Mohammed Abd Alla</p>
+<div class="card-footer">
+<span><i class="fa-brands fa-js"></i> JavaScript</span>
+</div>
+ </div>
+</a>
+
+                                                            <!-- card 2 -->
+<a href="materialvid.html?id=js-output" class="video-card">
+    <div class="thumbnail">
+        <img src="jsv/outpot2.jpeg" alt="JavaScript Output">
+        <div class="play-button"><i class="fa-solid fa-play"></i></div>
+        <span class="duration">3:00</span>
+     </div>
+    <div class="card-content">
+ <h2>JavaScript Output</h2>
+        <p class="teacher"><i class="fa-solid fa-user"></i> Osama Hamdi</p>
+        <div class="card-footer">
+            <span><i class="fa-brands fa-js"></i> JavaScript</span>
+        </div>
+    </div>
+ </a>
+
+                                                                <!-- card 3 -->
+<a href="materialvid.html?id=js-statements" class="video-card">
+    <div class="thumbnail">
+        <img src="jsv/statment 3.jpeg" alt="JavaScript Statement">
+        <div class="play-button"><i class="fa-solid fa-play"></i></div>
+        <span class="duration">3:00</span>
+     </div>
+     <div class="card-content">
+          <h2>JavaScript Statement</h2>
+         <p class="teacher"><i class="fa-solid fa-user"></i> Maram Ahmed</p>
+        <div class="card-footer">
+             <span><i class="fa-brands fa-js"></i> JavaScript</span>
+         </div>
+    </div>
+ </a>
+
+                                                            <!-- card 4 -->
+ <a href="materialvid.html?id=js-variables" class="video-card">
+    <div class="thumbnail">
+        <img src="jsv/var4.jpeg" alt="JavaScript Variables">
+         <div class="play-button"><i class="fa-solid fa-play"></i></div>
+         <span class="duration">5:00</span>
+     </div>
+     <div class="card-content">
+     <h2>JavaScript Variables</h2>
+     <p class="teacher"><i class="fa-solid fa-user"></i> Osama Hamdi</p>
+     <div class="card-footer">
+             <span><i class="fa-brands fa-js"></i> JavaScript</span>
+         </div>
+     </div>
+</a>
+
+                                                                  <!-- card 5 -->
+<a href="materialvid.html?id=js-const" class="video-card">
+     <div class="thumbnail">
+        <img src="jsv/const 5.jpeg" alt="JavaScript const">
+        <div class="play-button"><i class="fa-solid fa-play"></i></div>
+        <span class="duration">4:00</span>
+     </div>
+    <div class="card-content">
+        <h2>JavaScript Const</h2>
+        <p class="teacher"><i class="fa-solid fa-user"></i> Maram Ahmed</p>
+        <div class="card-footer">
+               <span><i class="fa-brands fa-js"></i> JavaScript</span>
+          </div>
+     </div>
+</a>
+
+                                                                     <!-- card 6 -->
+<a href="materialvid.html?id=js-where-to" class="video-card">
+    <div class="thumbnail">
+        <img src="jsv/where to 6.jpeg" alt="JavaScript Where to">
+        <div class="play-button"><i class="fa-solid fa-play"></i></div>
+        <span class="duration">2:00</span>
+    </div>
+    <div class="card-content">
+          <h2>JavaScript Where To Use</h2>
+          <p class="teacher"><i class="fa-solid fa-user"></i> Mohammed Abd Alla</p>
+      <div class="card-footer">
+              <span><i class="fa-brands fa-js"></i> JavaScript</span>
+          </div>
+   </div>
+ </a>
+</section>
+
+        <div class="bottom-navigation">
+            <button class="previous-btn" type="button">
+                <i class="fa-solid fa-arrow-left"></i>
+                Previous
+            </button>
+            <button class="next-btn" type="button">
+                Next
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-logo">
+                <img
+                    src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png"
+                    alt="Mind Step"
+                >
+            </div>
+
+            <p class="footer-tagline">
+                Learn smarter. Remember better.
+            </p>
+
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">terms of service</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">customer service</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2026 Mind Step. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+    <script>
+        // Order categories switch through with Previous / Next.
+        var categoryFlow = ['videosGrid', 'videosGrid2', 'videosGrid3'];
+
+        function showSection(sectionId) {
+
+            document.querySelectorAll('.videos-grid').forEach(function (section) {
+                section.style.display = 'none';
+            });
+
+            var selectedSection = document.getElementById(sectionId);
+            if (!selectedSection) return;
+            selectedSection.style.display = 'grid';
+
+            document.querySelectorAll('.category-link').forEach(function (btn) {
+                btn.classList.toggle('active', btn.dataset.target === sectionId);
+            });
+
+            selectedSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        function currentSectionId() {
+            var activeBtn = document.querySelector('.category-link.active');
+            return activeBtn ? activeBtn.dataset.target : categoryFlow[0];
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            showSection('videosGrid');
+
+            var prevBtn = document.querySelector('.previous-btn');
+            var nextBtn = document.querySelector('.next-btn');
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', function () {
+                    var idx = categoryFlow.indexOf(currentSectionId());
+                    var target = categoryFlow[(idx - 1 + categoryFlow.length) % categoryFlow.length];
+                    showSection(target);
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', function () {
+                    var idx = categoryFlow.indexOf(currentSectionId());
+                    var target = categoryFlow[(idx + 1) % categoryFlow.length];
+                    showSection(target);
+                });
+            }
+
+        });
+    </script>
+
+    <script src="js/material.js"></script>
+    <script src="js/mahy.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Video | Let's go learn</title>
+
+    <link rel="stylesheet" href="css/materialvid.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+                                                                      <!-- NAV -->
+
+<header class="header">
+                                     <!-- هنا اللوجو -->
+    <nav class="navbar">
+      <div class="nav-spacer"></div>
+     <div class="nav-links">
+     <a href="material.html#videosGrid" id="navHtml" class="nav-link" data-category="htmlv">
+       <i class="fa-brands fa-html5"></i>
+       HTML
+      </a>
+<a href="material.html#videosGrid2" id="navCss" class="nav-link" data-category="cssv">
+    <i class="fa-brands fa-css3-alt"></i>
+     CSS
+ </a>
+ <a href="material.html#videosGrid3" id="navJs" class="nav-link" data-category="jsv">
+    <i class="fa-brands fa-js"></i>
+    JavaScript
+ </a>
+        </div> 
+                                                             <!-- هنا يا ماهي -->
+        <a href="material.html" class="home">
+            HOME
+            <i class="fa-solid fa-house"></i>
+        </a>
+
+                                                         <!-- زرار المنيو بتاع الموبايل -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+</header>
+
+                                                             <!-- Mobile sidebar -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<aside class="sidebar" id="sidebar" aria-hidden="true">
+    <div class="sidebar-header">
+        <span>Menu</span>
+        <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+    <nav class="sidebar-links">
+        <a href="material.html#videosGrid" class="nav-link" data-category="htmlv">
+            <i class="fa-brands fa-html5"></i> HTML
+        </a>
+        <a href="material.html#videosGrid2" class="nav-link" data-category="cssv">
+            <i class="fa-brands fa-css3-alt"></i> CSS
+        </a>
+        <a href="material.html#videosGrid3" class="nav-link" data-category="jsv">
+            <i class="fa-brands fa-js"></i> JavaScript
+        </a>
+        <a href="material.html" class="sidebar-home">
+            <i class="fa-solid fa-house"></i> HOME
+        </a>
+    </nav>
+</aside>
+
+                                                              <!-- video page -->
+
+<main class="video-page">
+
+    
+    <div class="breadcrumb">
+                                                             <!-- هنا يا ماهي -->
+        <a href="material.html">Home</a>
+        <i class="fa-solid fa-angle-right"></i>
+        <span id="breadcrumbCategory">HTML</span>
+        <i class="fa-solid fa-angle-right"></i>
+        <strong id="breadcrumbTitle">Video</strong>
+    </div>
+
+                                                           <!--  video player -->
+
+    <section class="video-box">
+        <video id="mainVideo" controls preload="metadata">
+            <source id="videoSource" src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+
+                                      <!-- معلومات -->
+
+    <section class="video-info">
+        <h1 id="videoTitle">
+            Loading...
+        </h1>
+
+        <div class="video-meta">
+            <span>
+                <i class="fa-solid fa-user"></i>
+                <span id="videoTeacher"></span>
+            </span>
+            <span>
+                <i class="fa-regular fa-clock"></i>
+                <span id="videoDuration"></span>
+            </span>
+            <span>
+                <i class="fa-solid fa-book-open"></i>
+                <span id="videoCategory"></span>
+            </span>
+        </div>
+
+        <div class="line"></div>
+
+
+                                                              <!-- وصف الفيديو -->
+
+        <div class="description">
+            <h2>
+                <i class="fa-solid fa-circle-info"></i>
+                Video Description
+            </h2>
+            <p id="videoDescription"></p>
+        </div>
+
+
+        <div class="learn-box">
+
+            <h2>
+                <i class="fa-solid fa-bullseye"></i>
+                What will you learn?
+            </h2>
+            <div class="learning-list" id="learningList">
+                <!-- filled by video.js -->
+            </div>
+
+        </div>
+
+
+        <!-- Tags -->
+
+        <div class="tags" id="videoTags">
+            <!-- filled by video.js -->
+        </div>
+
+    </section>
+
+
+   
+
+    <div class="tip">
+
+        <i class="fa-solid fa-lightbulb"></i>
+
+        <span>
+            Tip: Try to practice what you learn while watching the video.
+        </span>
+
+    </div>
+
+
+
+    <div class="video-navigation">
+
+        <a href="material.html" class="nav-btn previous" id="prevBtn">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            <div>
+                <small>Previous video</small>
+                <strong id="prevLabel">Back to all videos</strong>
+            </div>
+
+        </a>
+
+
+        <a href="material.html" class="nav-btn next locked" id="nextBtn" aria-disabled="true">
+
+            <div>
+                <small id="nextSmall">Finish the video to unlock</small>
+                <strong id="nextLabel">Back to all videos</strong>
+            </div>
+
+            <i class="fa-solid fa-lock" id="nextIcon"></i>
+
+        </a>
+
+    </div>
+
+</main>
+
+
+<script src="js/materialvid.js"></script>
+
+</body>
+</html>

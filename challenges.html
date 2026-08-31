@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CodeLearn - Coding Tasks</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/nav&footer.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    >
+
+    <link rel="stylesheet" href="css/challenges.css">
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+    <div class="logo">
+        <img src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png" alt="Mind Step">
+    </div>
+
+    <ul class="nav-links">
+
+        <li><a href="index.html">HOME</a></li>
+
+        <li class="features-menu">
+            <a href="index.html#features">
+                Features
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <ul class="features-dropdown">
+                <li><a href="diagnostic-test.html">Knowledge Assessment</a></li>
+                <li><a href="result.html">Weakness Deduction</a></li>
+                <li><a href="study-plan.html">Personalized Study Plan</a></li>
+                <li><a href="flashcards.html">Smart Flash Cards</a></li>
+                <li><a href="material.html">MATERIALS</a></li>
+                <li><a href="challenges.html" class="active">CHALLENGES</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </li>
+
+        <li><a href="index.html#how-it-works">How It Works</a></li>
+        <li><a href="index.html#contact">CONTACT US</a></li>
+
+    </ul>
+
+    <div class="nav-actions">
+
+        <button onclick="toggleDarkMode()" class="dark-mode-btn" id="darkModeBtn" type="button">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <a href="login.html" class="nav-cta">LOGIN</a>
+        <a href="signup.html" class="nav-cta">SIGNUP</a>
+
+        <i onclick="showsidebar()" class="fa-solid fa-bars menu-icon"></i>
+
+    </div>
+
+    <div class="sidebar">
+
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png" alt="Mind Step">
+            </div>
+            <i onclick="hidesidebar()" class="fa-solid fa-xmark close-icon"></i>
+        </div>
+
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+
+            <li class="sidebar-features">
+                <a href="index.html#features">
+                    Features
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+
+                <ul class="sidebar-features-dropdown">
+                    <li><a href="diagnostic-test.html">Knowledge Assessment</a></li>
+                    <li><a href="result.html">Weakness Deduction</a></li>
+                    <li><a href="study-plan.html">Personalized Study Plan</a></li>
+                    <li><a href="flashcards.html">Smart Flash Cards</a></li>
+                    <li><a href="material.html">MATERIALS</a></li>
+                    <li><a href="challenges.html">CHALLENGES</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </li>
+
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="index.html#contact">CONTACT US</a></li>
+        </ul>
+
+        <div class="sidebar-buttons">
+            <a href="login.html" class="sider-cta">LOGIN</a>
+            <a href="signup.html" class="sider-cta">SIGNUP</a>
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<main class="container">
+
+
+    <!-- PAGE TITLE -->
+
+    <div class="page-title">
+
+        <p class="small-title">
+            PRACTICE AREA
+        </p>
+
+        <h1>
+            Coding Tasks
+        </h1>
+
+        <p class="description">
+            Practice your programming skills by solving different tasks.
+        </p>
+
+    </div>
+
+
+
+    <!-- SUBJECTS -->
+
+    <div class="subjects">
+
+        <button
+            class="subject-btn active"
+            data-subject="HTML"
+        >
+            HTML
+        </button>
+
+
+        <button
+            class="subject-btn"
+            data-subject="CSS"
+        >
+            CSS
+        </button>
+
+
+        <button
+            class="subject-btn"
+            data-subject="JavaScript"
+        >
+            JavaScript
+        </button>
+
+    </div>
+
+
+
+    <!-- TASK LAYOUT -->
+
+    <div class="task-layout">
+
+
+        <section class="task-section">
+
+
+            <div class="task-card">
+
+
+                <!-- TASK HEADER -->
+
+                <div class="task-header">
+
+                    <div>
+
+                        <span class="task-number">
+
+                            <span id="currentLanguage">
+                                HTML
+                            </span>
+
+                            • TASK
+
+                            <span id="taskNumber">
+                                01
+                            </span>
+
+                        </span>
+
+
+                        <h2 id="taskTitle">
+                            Personal Introduction Page
+                        </h2>
+
+                    </div>
+
+
+                    <span
+                        id="difficulty"
+                        class="difficulty easy"
+                    >
+                        Easy
+                    </span>
+
+                </div>
+
+
+
+                <!-- INSTRUCTIONS -->
+
+                <div class="instructions">
+
+                    <h3>
+                        🎯 Your Task
+                    </h3>
+
+
+                    <p id="taskDescription"></p>
+
+
+                    <div class="requirements">
+
+                        <p>
+                            Requirements:
+                        </p>
+
+
+                        <ul id="requirementsList"></ul>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CODE EDITOR -->
+
+                <div class="editor-container">
+
+
+                    <div class="editor-header">
+
+
+                        <div class="editor-title">
+
+                            <span class="dot red"></span>
+
+                            <span class="dot yellow"></span>
+
+                            <span class="dot green"></span>
+
+                            <span class="file-name">
+                                solution
+                            </span>
+
+                        </div>
+
+
+                        <span
+                            id="language"
+                            class="language"
+                        >
+                            HTML
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="editor">
+
+                        <textarea
+                            id="codeEditor"
+                            spellcheck="false"
+                            placeholder="Write your code here..."
+                        ></textarea>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- CHECK -->
+
+                <div class="action-buttons">
+
+                    <button
+                        id="checkBtn"
+                        class="check-btn"
+                    >
+                        ✓ Check Solution
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- NAVIGATION -->
+
+            <div class="task-navigation">
+
+                <button
+                    id="previousBtn"
+                    class="nav-btn"
+                >
+                    ← Previous
+                </button>
+
+
+                <span id="taskCounter">
+                    1 / 4
+                </span>
+
+
+                <button
+                    id="nextBtn"
+                    class="nav-btn"
+                >
+                    Next →
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- PROGRESS -->
+
+        <aside class="progress-card">
+
+            <h3>
+                Your Progress
+            </h3>
+
+
+            <div class="progress-info">
+
+                <div>
+
+                    <span>
+                        Current Task
+                    </span>
+
+                    <strong id="completedCount">
+                        1
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Total Tasks
+                    </span>
+
+                    <strong id="totalTasks">
+                        4
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="progress-bar">
+
+                <div
+                    id="progressFill"
+                    class="progress-fill"
+                ></div>
+
+            </div>
+
+
+            <p
+                id="progressText"
+                class="progress-text"
+            >
+                Task 1 of 4
+            </p>
+
+
+            <div class="level">
+
+                <span>
+                    Current Subject
+                </span>
+
+                <strong id="currentSubject">
+                    HTML
+                </strong>
+
+            </div>
+
+
+            <div class="tip">
+
+                <span>
+                    💡
+                </span>
+
+                <p>
+                    Try to solve the task yourself before comparing your code with the reference solution.
+                </p>
+
+            </div>
+
+        </aside>
+
+
+    </div>
+
+
+</main>
+
+
+
+<!-- RESULT MODAL -->
+
+<div
+    id="resultModal"
+    class="modal"
+>
+
+
+    <div class="result-card">
+
+
+        <button
+            id="closeModal"
+            class="close-btn"
+        >
+            ×
+        </button>
+
+
+
+        <div class="result-title">
+
+            <div class="compare-icon">
+                &lt;/&gt;
+            </div>
+
+
+            <h2>
+                Compare & Learn
+            </h2>
+
+
+            <p>
+                Compare your code with the reference solution.
+            </p>
+
+        </div>
+
+
+
+        <!-- CODE COMPARISON -->
+
+        <div class="comparison">
+
+
+            <div class="solution-box">
+
+                <div class="solution-header">
+
+                    <h3>
+                        Your Code
+                    </h3>
+
+                    <span class="your-label">
+                        Your Solution
+                    </span>
+
+                </div>
+
+
+                <pre><code id="userSolution"></code></pre>
+
+            </div>
+
+
+
+            <div class="solution-box">
+
+                <div class="solution-header">
+
+                    <h3>
+                        Correct Code
+                    </h3>
+
+                    <span class="correct-label">
+                        Reference
+                    </span>
+
+                </div>
+
+
+                <pre><code id="correctSolution"></code></pre>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- OUTPUT -->
+
+        <div class="output-section">
+
+            <div class="output-header">
+
+                <div>
+
+                    <h3>
+                        Expected Output
+                    </h3>
+
+                    <p>
+                        Compare your result with the expected design.
+                    </p>
+
+                </div>
+
+
+                <span class="output-label">
+                    Preview
+                </span>
+
+            </div>
+
+
+            <div class="output-image-container">
+
+                <img
+                    id="outputImage"
+                    src=""
+                    alt="Expected task output"
+                >
+
+            </div>
+
+        </div>
+
+
+
+        <!-- BUTTONS -->
+
+        <div class="result-actions">
+
+            <button
+                id="backToTask"
+                class="back-btn"
+            >
+                ← Back to Task
+            </button>
+
+
+            <button
+                id="nextFromResult"
+                class="next-result-btn"
+            >
+                Next Task →
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-logo">
+            <img
+                src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png"
+                alt="Mind Step"
+            >
+        </div>
+
+        <p class="footer-tagline">
+            Learn smarter. Remember better.
+        </p>
+
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">customer service</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        <p>&copy; 2026 Mind Step. All rights reserved.</p>
+    </div>
+
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+
+<script src="js/challenges.js"></script>
+
+<script src="js/mahy.js"></script>
+
+
+</body>
+
+</html>

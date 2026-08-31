@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Plan | MindStep</title>
+    <link rel="stylesheet" href="css/nav&footer.css">
+    <link rel="stylesheet" href="css/studyplan.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<nav>
+
+    <!-- LOGO -->
+    <div class="logo">
+        <img src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png" alt="Mind Step">
+    </div>
+
+    <!-- DESKTOP NAV -->
+    <ul class="nav-links">
+
+        <li><a href="index.html">HOME</a></li>
+
+        <li class="features-menu">
+            <a href="index.html#features">
+                Features
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <ul class="features-dropdown">
+                <li><a href="diagnostic-test.html">Knowledge Assessment</a></li>
+                <li><a href="result.html">Weakness Deduction</a></li>
+                <li><a href="study-plan.html">Personalized Study Plan</a></li>
+                <li><a href="flashcards.html">Smart Flash Cards</a></li>
+                <li><a href="material.html">MATERIALS</a></li>
+                <li><a href="challenges.html">CHALLENGES</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </li>
+
+        <li><a href="index.html#how-it-works">How It Works</a></li>
+        <li><a href="index.html#contact">CONTACT US</a></li>
+
+    </ul>
+
+    <!-- NAV ACTIONS -->
+    <div class="nav-actions">
+
+        <button onclick="toggleDarkMode()" class="dark-mode-btn" id="darkModeBtn" type="button">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <a href="login.html" class="nav-cta">LOGIN</a>
+        <a href="signup.html" class="nav-cta">SIGNUP</a>
+
+        <i onclick="showsidebar()" class="fa-solid fa-bars menu-icon"></i>
+
+    </div>
+
+    <!-- MOBILE SIDEBAR -->
+    <div class="sidebar">
+
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png" alt="Mind Step">
+            </div>
+            <i onclick="hidesidebar()" class="fa-solid fa-xmark close-icon"></i>
+        </div>
+
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+
+            <li class="sidebar-features">
+                <a href="index.html#features">
+                    Features
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+
+                <ul class="sidebar-features-dropdown">
+                    <li><a href="diagnostic-test.html">Knowledge Assessment</a></li>
+                    <li><a href="result.html">Weakness Deduction</a></li>
+                    <li><a href="study-plan.html">Personalized Study Plan</a></li>
+                    <li><a href="flashcards.html">Smart Flash Cards</a></li>
+                    <li><a href="material.html">MATERIALS</a></li>
+                    <li><a href="challenges.html">CHALLENGES</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </li>
+
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="index.html#contact">CONTACT US</a></li>
+        </ul>
+
+        <div class="sidebar-buttons">
+            <a href="login.html" class="sider-cta">LOGIN</a>
+            <a href="signup.html" class="sider-cta">SIGNUP</a>
+        </div>
+
+    </div>
+
+</nav>
+
+    <div class="study-plan-container">
+        <!-- ... rest of your existing study-plan content stays exactly the same ... -->
+
+
+
+
+
+
+
+
+    <div class="study-plan-container">
+        <section class="first-section">
+            <div class="first-text">
+                <h1>
+                    Your Personalized
+                    <span>Study Plan</span>
+                </h1>
+                <p>
+                creat your personalized plan to help you achieve your learning goals.
+                </p>
+            </div>
+            <div class="first-illustration">
+                <img src="1787584188432.png" class="img">
+            </div>
+        </section>
+        <section class="section-card schedule-section">
+            <div class="heading-section">
+                <div class="icon">
+                    📅
+                </div>
+                <div>
+                    <h2>
+                        Study Schedule
+                    </h2>
+                    <p>
+                        Create your study plan and save it
+                    </p>
+                </div>
+            </div>
+            <div class="schedule-form">
+                <div class="form-group">
+                    <label for="schedule-date">
+                        Date
+                    </label>
+                    <input type="date" id="schedule-date">
+                </div>
+                <div class="form-group">
+                    <label for="schedule-subject">
+                        Subject
+                    </label>
+                    <input type="text"id="schedule-subject"placeholder="Enter subject">
+                    <small id="subject-error"class="error-message"></small>
+                </div>
+                <div class="form-group">
+                    <label for="schedule-time">
+                        Time
+                    </label>
+                    <input type="time"id="schedule-time">
+                </div>
+            </div>
+            <div class="save-area">
+                <button id="save-btn" class="save-btn" type="button">
+                    Save
+                </button>
+            </div>
+            <div id="saved-section" class="saved-section hidden">
+                <div class="saved-title">
+                    Saved Study Plans
+                </div>
+                <div id="saved-display"class="saved-display"></div>
+            </div>
+        </section>
+        <section class="academic-coaching">
+            <div class="academic-header">
+                <div class="academic-title">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"class="academic-icon">
+                    <div>
+                        <h2>Academic Coaching</h2>
+                        <p>Get personalized guidance to improve your study plan.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="coaching-card">
+                <div class="coaching-info">
+                    <div class="booking-icon">
+                        📅
+                    </div>
+                    <div class="booking-text">
+                        <h3>Book a Session</h3>
+                        <p>Schedule a 1:1 session with an academic coach.</p>
+                    </div>
+                </div>
+                <button class="book-btn" onclick="showBookingPopup()">
+                    Book Now
+                </button>
+            </div>
+        </section>
+        <div class="popup-overlay" id="bookingPopup">
+            <div class="popup-box">
+                <div class="popup-icon">
+                    ✓
+                </div>
+                <h2>Booking Confirmed!</h2>
+                <p>
+                    Your academic coaching session has been booked successfully.
+                </p>
+                <button onclick="closeBookingPopup()">
+                    OK
+                </button>
+            </div>
+        </div>
+        <section class="section-card goals-section">
+            <div class="section-heading">
+                <h2>
+                    Subjects & Goals
+                </h2>
+            </div>
+            <div class="goals-grid">
+                <article class="goal-card html-card">
+                    <h3> HTML</h3>
+                    <p>
+                        Learn the structure of web pages, elements,links, images and more.
+                    </p>
+                    <div class="goal">
+                        🎯
+                        <strong>
+                            Goal:
+                        </strong>
+                        Build a complete HTML page
+                    </div>
+                </article>
+                <article class="goal-card css-card">
+                    <h3>CSS</h3>
+                    <p>
+                        Understand selectors, colors, spacing,layout and box model.
+                    </p>
+                    <div class="goal">
+                        🎯
+                        <strong>
+                            Goal:
+                        </strong>
+                        Style a multi-section page
+                    </div>
+                </article>
+                <article class="goal-card js-card">
+                    <h3>JavaScript</h3>
+                    <p>
+                        Learn variables, data types, operators and basic functions.
+                    </p>
+                    <div class="goal">
+                        🎯
+                        <strong>
+                            Goal:
+                        </strong>
+                        Create interactive elements
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="section-card techniques-section">
+            <div class="section-heading">
+                <h2>
+                    Study Techniques
+                </h2>
+            </div>
+            <div class="techniques-grid">
+                <article class="technique">
+                    <div class="technique-icon purple-tech">
+                        ⏱
+                    </div>
+                    <div>
+                        <h3>
+                            Pomodoro Technique
+                        </h3>
+                        <p>
+                            Study for 25 minutes, then take a 5 minute break.
+                        </p>
+                    </div>
+                </article>
+                <article class="technique">
+                    <div class="technique-icon blue-tech">
+                        🧠
+                    </div>
+                    <div>
+                        <h3>
+                            Active Recall
+                        </h3>
+                        <p>
+                            Test yourself instead of only rereading your notes.
+                        </p>
+                    </div>
+                </article>
+                <article class="technique">
+                    <div class="technique-icon cyan-tech">
+                        ✎
+                    </div>
+                    <div>
+                        <h3>
+                            Practice First
+                        </h3>
+                        <p>
+                            Apply what you learn through small projects and exercises.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-logo">
+                <img src="ChatGPT_Image_Aug_16__2026__09_27_09_PM-removebg-preview.png" alt="Mind Step">
+            </div>
+
+            <p class="footer-tagline">Learn smarter. Remember better.</p>
+
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">terms of service</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">customer service</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2026 Mind Step. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+    <script src="js/mahy.js"></script>
+    <script src="js/study-plan.js"></script>
+</body>
+</html>
+
